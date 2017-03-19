@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta charset="utf-8">
+<title>Оператор instanceof </title> 
+<!-- 
+
+Оператор instanceof позволяет проверить, создан ли объект данной функцией, 
+причём работает для любых функций – как встроенных, так и наших. 
+
+Таким образом, instanceof, в отличие от [[Class]] и typeof может помочь 
+выяснить тип для новых объектов, созданных нашими конструкторами.
+
+-->
+<script>
+	
+    var arr = [];
+    	
+    alert( arr instanceof Object )
+
+function Human(name, age) {
+	this.talk = function() { alert( 'Hello!!!' ) }; 
+	this.age = age; 
+	this.name = name;    
+};  
+
+var Fred = new Human('Fred', 30); 
+var Alex = new Human('Alex', 28); 
+
+if (Fred instanceof Human && Alex instanceof Human) alert(true); 
+
+var toString = {}.toString; 
+document.write(toString.call(Fred));
+
+</script>
+</head> 
+	
+<body> 
+
+</body>
+</html>
