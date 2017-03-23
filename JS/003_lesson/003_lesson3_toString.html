@@ -1,34 +1,31 @@
 ﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Преобразование объектов: toString </title>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8">
-<title>Преобразование объектов: toString </title> 
-<!-- 
+    Метод toString возвращает строковое представление объекта.
+    Метод toString не обязан возвращать именно строку.
 
-Метод toString возвращает строковое представление объекта. 
-Метод toString не обязан возвращать именно строку.
+    Его результат может быть любого примитивного типа.
 
-Его результат может быть любого примитивного типа. 
 
--->
-<script>
-	var user = {
-        firstName: 'Вася'
-};
+    <script>
+        var user = {
+            firstName: 'Вася'
+        };
 
-alert( user ); // [object Object] 
+        alert(user); // [object Object]
 
-user.toString = function() {
-	return 'Пользователь ' + this.firstName; 
-}; 
+        user.toString = function () {
+            return 'Пользователь ' + this.firstName;
+        };
 
-alert(user) // Пользователь Вася
+        alert(user) // Пользователь Вася
 
-</script>
-</head> 
-	
-<body> 
+    </script>
+</head>
 
+<body>
 </body>
 </html>
