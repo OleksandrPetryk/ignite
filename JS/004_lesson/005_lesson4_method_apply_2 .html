@@ -1,30 +1,22 @@
 ﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Метод Apply </title>
+   
+    <script>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8">
-<title>Метод Apply </title> 
-<!-- 
+        var arr = [];
+        arr.push(1);
+        arr.push(5);
+        arr.push(2);
 
-В современном стандарте call/apply передают this «как есть». А в старом, без use strict, 
-при указании первого аргумента null или undefined в call/apply, функция получает this = window. 
+        // получить максимум из элементов arr
+        alert(Math.max.apply(null, arr)); // 5
 
---> 
+    </script>
+</head>
 
-<script>
-	
-var arr = [];
-arr.push(1);
-arr.push(5);
-arr.push(2);
-
-// получить максимум из элементов arr
-alert( Math.max.apply(null, arr) ); // 5 
-
-</script>
-</head> 
-	
-<body> 
-
+<body>
 </body>
 </html>
