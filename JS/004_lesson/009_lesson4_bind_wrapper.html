@@ -7,19 +7,19 @@
     В данном примере используется функция-обертка, выполняющая функцию метода bind(т.е. фиксирующая контекст вызова функции).
     -->
     <script>
-
+        "use strict"
         function bind(func, context) {
 
             return function () {
 
-                return func.apply(context, arguments);
+                return func.apply(context, arguments); 
             };
         }
 
         var user1 = {
             firstName: "Вася",
-            sayHi: function () {
-                alert(this.firstName);
+            sayHi: function (a) {
+                alert(a + this.firstName);
             }
         };
 
@@ -30,7 +30,7 @@
         // в результате вызова bind(func, context) мы получаем «функцию-обёртку»,
         // которая прозрачно передаёт вызов в func, с теми же аргументами, но фиксированным контекстом context.
         var b = bind(user1.sayHi, user2);
-        b(); // Петя
+        b("Привет "); // Петя
 
     </script>
 </head>

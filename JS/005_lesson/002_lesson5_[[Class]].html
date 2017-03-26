@@ -1,36 +1,32 @@
 ﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Типы данных: [[Class]] </title>
+    <!--
+        Во всех встроенных объектах есть специальное внутреннее свойство [[Class]],
+        в котором хранится информация о его типе или конструкторе.
+    -->
+    <script>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8">
-<title>Типы данных: [[Class]] </title> 
+        var toString = {}.toString;
+        // метод toString, принадлежащий именно стандартному объекту object.
+        // Для получения [[Class]] нужна именно внутренняя реализация toString стандартного объекта Object, другая не подойдёт.
 
-<!-- 
-    Во всех встроенных объектах есть специальное внутреннее свойство [[Class]], 
-    в котором хранится информация о его типе или конструкторе. 
--->
+        var arr = [1, 2];
+        alert(toString.call(arr)); // [object Array]
 
-<script>
-	
-    var toString = {}.toString; 
-    // метод toString, принадлежащий именно стандартному объекту object. 
-    // Для получения [[Class]] нужна именно внутренняя реализация toString стандартного объекта Object, другая не подойдёт.
+        alert(arr.constructor);
 
-    var arr = [1, 2];
-    alert( toString.call(arr) ); // [object Array]
+        var date = new Date;
+        alert(toString.call(date)); // [object Date]
 
-    alert(arr.constructor);
-    
-    var date = new Date;
-    alert( toString.call(date) ); // [object Date]
-    
-    var user = { name: "Вася" };
-    alert( toString.call(user) ); // [object Object]
+        var user = { name: "Вася" };
+        alert(toString.call(user)); // [object Object]
 
-</script>
-</head> 
-	
-<body> 
+    </script>
+</head>
 
+<body>
 </body>
 </html>
