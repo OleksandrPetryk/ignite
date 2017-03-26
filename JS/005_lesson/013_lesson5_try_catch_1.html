@@ -1,41 +1,38 @@
 ﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Перехват ошибок, "try..catch" </title>
+    <!--
+        Для отладки скрипта в JavaScript есть конструкция try...catch
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8"> 
-<title>Перехват ошибок, "try..catch" </title> 
+        Работает она так:
 
-<!--
-    Для отладки скрипта в JavaScript есть конструкция try...catch 
+        Выполняется код внутри блока try.
+        Если в нём ошибок нет, то блок catch(err) игнорируется, то есть выполнение доходит до конца try и потом пропускает catch.
+        Если в нём возникнет ошибка, то выполнение try на ней прерывается, и управление прыгает в начало блока catch(err).
+        try..catch работает только в синхронном коде.
+    -->
+    <script>
 
-    Работает она так:
+        var data = "Has Error"; // в данных ошибка
 
-    Выполняется код внутри блока try.
-    Если в нём ошибок нет, то блок catch(err) игнорируется, то есть выполнение доходит до конца try и потом пропускает catch.
-    Если в нём возникнет ошибка, то выполнение try на ней прерывается, и управление прыгает в начало блока catch(err).
-    try..catch работает только в синхронном коде. 
---> 
+        try {
 
-<script>
-	
-    var data = "Has Error"; // в данных ошибка
+            var user = JSON.parse(data); // <-- ошибка при выполнении
+            alert(user.name); // не сработает
 
-    try {
+        } catch (e) {
+            // ...выполнится catch
+            alert("Извините, в данных ошибка, мы попробуем получить их ещё раз");
+            alert(e.name);
+            alert(e.message);
+        }
 
-         var user = JSON.parse(data); // <-- ошибка при выполнении
-         alert( user.name ); // не сработает
+    </script>
+</head>
 
-    } catch (e) {
-      // ...выполнится catch
-     alert( "Извините, в данных ошибка, мы попробуем получить их ещё раз" );
-     alert( e.name );
-     alert( e.message ); 
-    }
-
-</script>
-</head> 
-	
-<body> 
-<!--html here --> 
+<body>
+    <!--html here -->
 </body>
 </html>
