@@ -1,40 +1,35 @@
 ﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Навигация по DOM</title>
+    <!--
+             Свойства для навигации по DOM
+             childNodes - массив всех дочерних узлов
+             firstChild - первый дочерний узел
+             lastChild - последний дочерний узел
+             nextSibling - следующий узел расположенный на одном уровне с текущим
+             previousSibling - предыдущий узел расположенный на одном уровне с текущим
+             parentNode - родительский узел для текущего элемента
+    -->
+    <script>
+        window.onload = function () {
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8">
-<title>Навигация по DOM</title> 
-<!-- 
-        
-         Свойства для навигации по DOM
-         childNodes - массив всех дочерних узлов
-         firstChild - первый дочерний узел
-         lastChild - последний дочерний узел
-         nextSibling - следующий узел расположенный на одном уровне с текущим
-         previousSibling - предыдущий узел расположенный на одном уровне с текущим
-         parentNode - родительский узел для текущего элемента
+            var list = document.getElementById("list");
 
+            list.firstChild.style.color = 'blue';
+            list.lastChild.style.color = 'red';
 
---> 
+            //list.firstElementChild.style.color = 'blue';
 
-<script>
-	window.onload = function() {
+            list.firstChild.nextSibling.style.color = 'orange';
+            list.lastChild.previousSibling.style.color = 'green';
 
-	    var list = document.getElementById("list");
-		
-		list.firstChild.style.color = 'blue'; 
-		list.lastChild.style.color = 'red';
+            list.parentNode.style.backgroundColor = '#ffe';
+        }
+    </script>
+</head>
 
-		//list.firstElementChild.style.color = 'blue';
-        
-		list.firstChild.nextSibling.style.color = 'orange'; 
-		list.lastChild.previousSibling.style.color = 'green'; 
-        
-		list.parentNode.style.backgroundColor = '#ffe'; 
-	}
-</script>
-</head> 
-	
 <body>
     <ul id="list"><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li><li>Item 5</li></ul>
 </body>

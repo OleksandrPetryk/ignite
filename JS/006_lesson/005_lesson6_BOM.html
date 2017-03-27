@@ -1,25 +1,23 @@
 ﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>BOM </title>
+    <!--
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8">
-<title>BOM </title> 
-<!-- 
+    BOM (Browser Object Model) -  это объекты для работы с элементами браузера.
+    Например:
+    - Объект navigator, который содержит общую информацию о браузере и операционной системе.
+    - Объект location, который содержит информацию о текущем URL страницы и позволяет перенаправить посетителя на новый URL.
+    - Функции alert/confirm/prompt.
 
-BOM (Browser Object Model) -  это объекты для работы с элементами браузера. 
-Например: 
-- Объект navigator, который содержит общую информацию о браузере и операционной системе. 
-- Объект location, который содержит информацию о текущем URL страницы и позволяет перенаправить посетителя на новый URL. 
-- Функции alert/confirm/prompt. 
+    Больше информации по объекту navigator:
+    https://developer.mozilla.org/ru/docs/Web/API/Navigator
+    http://www.wisdomweb.ru/JS/bomdet.php
 
-Больше информации по объекту navigator: 
-https://developer.mozilla.org/ru/docs/Web/API/Navigator 
-http://www.wisdomweb.ru/JS/bomdet.php
+    -->
+    <script>
 
--->
-
-<script>
-	
         // location - URL адрес текущего документа.
         document.write("location = " + document.location + "<br />");               // весь url
         document.write("protocol  = " + document.location.protocol + "<br />");     // протокол
@@ -40,13 +38,13 @@ http://www.wisdomweb.ru/JS/bomdet.php
         for (var propname in navigator) {
             browserInfo += propname + ": " + navigator[propname] + "\n";
         }
-        alert(browserInfo); 
+        alert(browserInfo);
 
-        
-</script>
-</head> 
-	
-<body> 
-<!-- html here --> 
+
+    </script>
+</head>
+
+<body>
+    <!-- html here -->
 </body>
 </html>

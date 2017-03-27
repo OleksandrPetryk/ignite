@@ -1,60 +1,57 @@
 ﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Свойства DOM-узлов </title>
+    <!--
+    Свойства узлов DOM:
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8">
-<title>Свойства DOM-узлов </title> 
+    nodeName -  содержит название(тег) элемента узла. Есть у узла любого типа.
+    tagName - содержит название(тег) элемента узла. Есть только у узла с типом Element.
+    innerHTML - позволяет получить HTML-содержимое элемента в виде строки. В innerHTML можно и читать и писать.
+    outerHTML - содержит HTML элемент целиком. Изменить outerHTML элемента невозможно.
+    nodeValue/data - позволяет получить содержимое узлов, доступно на чтение и запись через свойство data.
+    textContent - Иными словами, elem.textContent возвращает конкатенацию всех текстовых узлов внутри elem.
+    hidden - работает так же, как css свойство display: none;
 
-<!-- 
-Свойства узлов DOM: 
+    -->
+    <script>
+        window.onload = function () {
 
-nodeName -  содержит название(тег) элемента узла. Есть у узла любого типа. 
-tagName - содержит название(тег) элемента узла. Есть только у узла с типом Element. 
-innerHTML - позволяет получить HTML-содержимое элемента в виде строки. В innerHTML можно и читать и писать.
-outerHTML - содержит HTML элемент целиком. Изменить outerHTML элемента невозможно. 
-nodeValue/data - позволяет получить содержимое узлов, доступно на чтение и запись через свойство data.  
-textContent - Иными словами, elem.textContent возвращает конкатенацию всех текстовых узлов внутри elem. 
-hidden - работает так же, как css свойство display: none; 
+            var div = document.getElementById('output');
+            var bodyChild = document.body.childNodes;
 
--->
+            //div.innerHTML = '<b>Свойство nodeValue для document.body.childNodes: </b>'
 
-<script>
-window.onload = function() { 
+            //for (var i = 0; i < bodyChild.length; i++) {
+            //         div.innerHTML += '<br/> ' + bodyChild[i].nodeValue;
+            //     }
 
-   var div = document.getElementById('output'); 
-   var bodyChild = document.body.childNodes;
+            //div.innerHTML += '<br/>' + '<b>Свойство innerHTML для элементов li: </b>'
+            // var li = document.getElementsByTagName('li');
+            //for (i = 0; i < li.length; i++) {
+            //        div.innerHTML += li[i].innerHTML + '; ';
+            //    }
 
-    //div.innerHTML = '<b>Свойство nodeValue для document.body.childNodes: </b>'
+            // var headings = document.getElementsByTagName('h1');
+            //div.innerHTML += '<br/>' + '<b>Свойство textContent для элементов h1: </b>'
+            //for (i = 0; i < headings.length; i++) {
+            //  div.innerHTML += headings[i].textContent + '; ';
+            //}
 
-    //for (var i = 0; i < bodyChild.length; i++) {
-    //         div.innerHTML += '<br/> ' + bodyChild[i].nodeValue;
-    //     } 
+            //  div.innerHTML += '<br/>' + '<b>Свойство nodeValue для элементов li.nextSibling: </b>'
+            //  for (i = 0; i < li.length; i++) {
+            //	div.innerHTML += li[i].nextSibling.data + '; ';
+            //}
 
-   //div.innerHTML += '<br/>' + '<b>Свойство innerHTML для элементов li: </b>' 
-  // var li = document.getElementsByTagName('li'); 
-   //for (i = 0; i < li.length; i++) { 
-   //        div.innerHTML += li[i].innerHTML + '; '; 
-   //    } 
+            //alert('Свойство outerHTML для элемента p' + document.getElementsByClassName('paragraph')[0].outerHTML);
+            //setTimeout(function () { headings[2].hidden = true; alert('Заголовок 3 скрыт!') }, 3000); // спрятать первый заголовок;
 
-  // var headings = document.getElementsByTagName('h1'); 
-   //div.innerHTML += '<br/>' + '<b>Свойство textContent для элементов h1: </b>' 
-   //for (i = 0; i < headings.length; i++) { 
-   //  div.innerHTML += headings[i].textContent + '; '; 
-  //} 
- 
-//  div.innerHTML += '<br/>' + '<b>Свойство nodeValue для элементов li.nextSibling: </b>' 
-//  for (i = 0; i < li.length; i++) { 
-//	div.innerHTML += li[i].nextSibling.data + '; '; 
-//} 
+        };
 
-//alert('Свойство outerHTML для элемента p' + document.getElementsByClassName('paragraph')[0].outerHTML); 
-//setTimeout(function () { headings[2].hidden = true; alert('Заголовок 3 скрыт!') }, 3000); // спрятать первый заголовок; 
+    </script>
+</head>
 
-}; 
-
-</script>
-</head> 
-	
 <body>
     <div>
         <h1>Heading 1</h1>
