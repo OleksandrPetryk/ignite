@@ -1,29 +1,28 @@
 ﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Объект события </title>
+    <!--
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8">
-<title>Объект события </title> 
-<!-- 
+    Объект события содержит ценную информацию о деталях события.
+    Он передается первым аргументом event в обработчик для всех браузеров, кроме IE8-, в которых используется глобальная переменная window.event.
 
-Объект события содержит ценную информацию о деталях события.
-Он передается первым аргументом event в обработчик для всех браузеров, кроме IE8-, в которых используется глобальная переменная window.event.
-
--->
+    -->
     <style>
         #wrapper p {
-            width:100px;
-            height:100px;
-            background-color:green;
-            float:left;
-            margin:10px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+            margin: 10px;
         }
     </style>
-<script type="text/javascript"> 
+    <script type="text/javascript">
 
-	       window.addEventListener("load", function () {
+        window.addEventListener("load", function () {
 
-           var wrapper = document.getElementById("wrapper");
+            var wrapper = document.getElementById("wrapper");
 
             // e - объект события которое возникло в элементе wrapper или в его дочерних элементах
             wrapper.addEventListener("click", function (e) {
@@ -32,12 +31,12 @@
                 //Объект события сожержит в себе свойство target, а свойство target содержит в себе ссылку на тот элемент разметки который был инициатором события
                 // т.е в свойстве target будет всегда находится тот элемент по которому мы нажали.
             }, false);
-        }, false); 
+        }, false);
 
-</script>
-</head> 
-	
-<body> 
+    </script>
+</head>
+
+<body>
     <div id="wrapper">
         <p></p>
         <p></p>
@@ -49,7 +48,6 @@
         <p></p>
         <p></p>
         <p></p>
-
         <div>
             <p></p>
             <p></p>

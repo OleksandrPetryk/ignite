@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -75,18 +74,17 @@
 
                 div3.scrollIntoView(false); // скролл до положения, при котором зеленый div окажется в нижней части области видимости страницы.
                 alert('Использован метод scrollIntoView(false). window.pageYOffset: ' + window.pageYOffset);
-            }, 2000);
-
-            setTimeout(function(){
-
-               div.scrollIntoView(true); // скролл до положения, при котором зеленый div окажется в верхней части области видимости страницы.
-               alert('Использован метод scrollIntoView(true). window.pageYOffset: ' + window.pageYOffset);
             }, 2500);
+
+            setTimeout(function () {
+
+                div.scrollIntoView(true); // скролл до положения, при котором зеленый div окажется в верхней части области видимости страницы.
+                alert('Использован метод scrollIntoView(true). window.pageYOffset: ' + window.pageYOffset);
+            }, 3500);
 
         }
     </script>
 </head>
-
 <body>
     <div id="container">
         <div id="div1"></div>

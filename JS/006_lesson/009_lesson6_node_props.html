@@ -33,19 +33,26 @@
             //        div.innerHTML += li[i].innerHTML + '; ';
             //    }
 
-            // var headings = document.getElementsByTagName('h1');
+            //var headings = document.getElementsByTagName('h1');
             //div.innerHTML += '<br/>' + '<b>Свойство textContent для элементов h1: </b>'
             //for (i = 0; i < headings.length; i++) {
             //  div.innerHTML += headings[i].textContent + '; ';
             //}
 
-            //  div.innerHTML += '<br/>' + '<b>Свойство nodeValue для элементов li.nextSibling: </b>'
+            //div.innerHTML += '<br/>' + '<b>Свойство nodeValue для элементов li.nextSibling: and li.firstChild:  </b>'
+            //  var li = document.getElementsByTagName('li');
             //  for (i = 0; i < li.length; i++) {
-            //	div.innerHTML += li[i].nextSibling.data + '; ';
+            //      div.innerHTML += li[i].nextSibling.data + '; ';
+            //      div.innerHTML += li[i].firstChild.nodeValue + '; ';
             //}
 
+            var headings = document.getElementsByTagName('h1');
             //alert('Свойство outerHTML для элемента p' + document.getElementsByClassName('paragraph')[0].outerHTML);
-            //setTimeout(function () { headings[2].hidden = true; alert('Заголовок 3 скрыт!') }, 3000); // спрятать первый заголовок;
+            setTimeout(
+                function () {
+                    headings[2].hidden = true;
+                    alert('Заголовок 3 скрыт!')
+                }, 3000); // спрятать первый заголовок;
 
         };
 

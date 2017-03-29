@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Добавление и удаление элементов  </title>
+    
+    <!--https://dom.spec.whatwg.org/-->
+    <!--http://caniuse.com/#search=append-->
+    <!--
+    Во всех этих методах nodes – DOM-узлы или строки, в любом сочетании и количестве.
+
+        node.append(...nodes) – вставляет nodes в конец node,
+        node.prepend(...nodes) – вставляет nodes в начало node,
+        node.after(...nodes) – вставляет nodes после узла node,
+        node.before(...nodes) – вставляет nodes перед узлом node,
+        node.replaceWith(...nodes) – вставляет nodes вместо node.
+    -->
+    <script>
+        window.onload = function () {
+
+            // добавим элемент в конец <body>
+            var p = document.createElement('p');
+            document.body.append(p);
+
+            var em = document.createElement('em');
+            em.append('Мир!');
+
+            // вставить в параграф текстовый и обычный узлы
+            p.append("Привет, ", em);
+
+            //var em2 = document.createElement('em2');
+            //em2.append('друг');
+
+            //p.replaceChild(em2, em);
+
+            // добавить элемент после <p>
+            //p.after(document.createElement('hr'))
+
+        }
+    </script>
+</head>
+
+<body>
+</body>
+</html>

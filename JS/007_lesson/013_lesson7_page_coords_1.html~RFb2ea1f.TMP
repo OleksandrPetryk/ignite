@@ -19,7 +19,6 @@
         #container {
             height: 1000px;
             width: 800px;
-            /*position:relative;*/
             margin: auto;
         }
 
@@ -29,7 +28,7 @@
             background-color: green;
             position: absolute;
             left: 200px;
-            top: 1300px;
+            top: 300px;
         }
     </style>
     <script>
@@ -42,15 +41,15 @@
                 var box = elem.getBoundingClientRect();
 
                 return {
-                    top: box.top ,
-                    left: box.left
+                    top: box.top + pageYOffset,
+                    left: box.left + pageXOffset
                 };
 
             };
 
             var top = getCoords(div).top + 'px';
             var left = getCoords(div).left + 'px';
-            alert('green div coords: left: ' + left + '; top: ' + top);
+            alert('green div coords: left - ' + left + '; top - ' + top);
 
         }
     </script>

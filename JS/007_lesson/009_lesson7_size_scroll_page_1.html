@@ -1,70 +1,70 @@
 ﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Размеры и прокрутка страницы </title>
+    <!--
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8"> 
-<title>Размеры и прокрутка страницы </title> 
-<!-- 
+    Свойства clientWidth/Height для элемента document.documentElement – ширина/высота видимой области окна.
+    window.innerWidth/innerHeight - текущий размер окна браузера.
+    Свойства clientWidth/Height, если есть полоса прокрутки, возвращают именно ширину/высоту внутри неё, доступную для документа, а window.innerWidth/Height – игнорируют её наличие.
 
-Свойства clientWidth/Height для элемента document.documentElement – ширина/высота видимой области окна. 
-window.innerWidth/innerHeight - текущий размер окна браузера. 
-Свойства clientWidth/Height, если есть полоса прокрутки, возвращают именно ширину/высоту внутри неё, доступную для документа, а window.innerWidth/Height – игнорируют её наличие.
+    -->
+    <style type="text/css">
+        body {
+            margin: 0 !important;
+        }
 
---> 
-<style type="text/css">
-    body {margin:0 !important;}
+        #container {
+            height: 2000px;
+            width: 800px;
+            margin: auto;
+        }
 
-	#container {
-		height: 2000px; 
-		width: 800px; 
-		margin: auto;
-	} 
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 200px;
+            top: 1200px;
+        }
 
-	#div1 {
-		width: 100px; 
-		height: 100px; 
-		background-color: blue; 
-		position: absolute; 
-		left: 200px; 
-		top: 1200px;
-	} 
+        #div2 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 800px;
+            top: 200px;
+        }
 
-	#div2 {
-		width: 100px; 
-		height: 100px; 
-		background-color: blue; 
-		position: absolute; 
-		left: 800px; 
-		top: 200px;
-	} 
+        #div3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 500px;
+            top: 800px;
+        }
+    </style>
+    <script type="text/javascript">
 
-	#div3 {
-		width: 100px; 
-		height: 100px; 
-		background-color: blue; 
-		position: absolute; 
-		left: 500px; 
-		top: 800px;
-	} 
-</style>
-<script type="text/javascript">
+        window.onload = function () {
+            alert('window.innerWidth: ' + window.innerWidth + '; window.innerHeight: ' + window.innerHeight);
+            alert('document.documentElement.clientWidth: ' + document.documentElement.clientWidth +
+                '; document.documentElement.clientHeight: ' + document.documentElement.clientHeight);
 
-    window.onload = function ()
-    {
-		alert('window.innerWidth: ' + window.innerWidth + '; window.innerHeight: ' + window.innerHeight); 
-		alert('document.documentElement.clientWidth: ' + document.documentElement.clientWidth + 
-			'; document.documentElement.clientHeight: ' + document.documentElement.clientHeight); 
+            alert('Высота с учетом прокрутки: ' + document.documentElement.scrollHeight);
+        }
+    </script>
+</head>
 
-        alert('Высота с учетом прокрутки: ' + document.documentElement.scrollHeight);
-	}
-</script>
-</head> 
-	
-<body> 
-<div id="container">
-	<div id="div1"></div>
-	<div id="div2"></div>
-	<div id="div3"></div>
-</div>
+<body>
+    <div id="container">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
 </body>
 </html>
