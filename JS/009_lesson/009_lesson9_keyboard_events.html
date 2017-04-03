@@ -1,24 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>События клавиатуры </title>
+    <!--
+    keydown - Клавиша нажата. Подходит для обработки функциональных клавиш.
+    keypress - 	Клавиша нажата и  отпущена;
+    keyup - 	Клавиша отпущена; Подходит для обработки функциональных клавиш.
+    -->
+    <script>
+        window.onload = function () {
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-<head> 
-<meta charset="utf-8">
-<title>События клавиатуры </title> 
-<!-- 
-keydown - Клавиша нажата. Подходит для обработки функциональных клавиш. 
-keypress - 	Клавиша нажата и  отпущена; 
-keyup - 	Клавиша отпущена; Подходит для обработки функциональных клавиш. 
---> 
-<script>
-        window.onload = function () { 
-
-        	alert('press a key!'); 
+            alert('press a key!');
 
             var main = document.getElementById("main");
 
             // onkeydown - событие подходит для обработки функциональных клавиш.
             main.onkeypress = function (e) { // снять комментарий
-            //main.onkeydown = function (e) {
+                //main.onkeydown = function (e) {
                 clear();
                 print("alt = " + e.altKey);
                 print("ctrl = " + e.ctrlKey);
@@ -35,9 +34,8 @@ keyup - 	Клавиша отпущена; Подходит для обработ
                 document.getElementById("output").innerHTML = "";
             }
         }
-</script>
-</head> 
-
+    </script>
+</head>
 <body id="main">
     <p id="output"></p>
 </body>

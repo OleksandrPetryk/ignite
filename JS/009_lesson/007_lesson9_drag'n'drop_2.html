@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -13,19 +12,15 @@
             height: 100px;
             cursor: pointer;
         }
-
         .circle {
             border-radius: 50%;
         }
-
         .red {
             background-color: red;
         }
-
         .green {
             background-color: limegreen;
         }
-
         .blue {
             background-color: deepskyblue;
         }
@@ -37,15 +32,12 @@
             var btn = document.getElementById('btn');
             btn.onclick = makeShape;
 
-
             function makeShape() {
 
-
                 var shapeToDrag = document.createElement('div');
-
                 var shape = document.getElementById('shape');
 
-                if (shape.options[1].selected == true) { // выбрать форму фйигуры
+                if (shape.options[1].selected == true) { // выбрать форму фигуры
                     shapeToDrag.classList.add('circle'); // присвоить соответствующий класс
                 }
 
@@ -68,11 +60,9 @@
                     shapeToDrag.style.height = size.value + 'px';
                 }
 
-
                 function drag(e) { // перетаскивание фигуры
 
                     this.style.zIndex = 100;
-
                     this.onmousemove = function (e) {
 
 
@@ -84,14 +74,12 @@
                             this.style.zIndex = 0;
                             this.onmousemove = null;
                             this.onmouseup = null;
-
                         }
                     }
                 }
                 shapeToDrag.onmousedown = drag;
                 document.body.appendChild(shapeToDrag);
             }
-
 
             var btn1 = document.getElementById('btn1');
             btn1.onclick = clearShapes;
@@ -108,23 +96,18 @@
 
     </script>
 </head>
-
 <body>
     Shape <select id="shape">
         <option>square </option>
         <option>circle</option>
     </select>
-
     Color <select id="color">
         <option>red</option>
         <option>green</option>
         <option>blue</option>
     </select>
-
     Size <input id="size" type="text" value="px">
-
     <button id="btn"> Create shape </button>
     <button id="btn1"> Clear </button>
-
 </body>
 </html>

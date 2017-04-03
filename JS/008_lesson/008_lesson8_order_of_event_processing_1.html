@@ -15,14 +15,17 @@
 
             var input = document.getElementsByTagName('input')[0];
 
+            //input.onclick = function () { };
+            //input.onclick = function () { };
+
             input.addEventListener('click', function () {
                 document.body.style.backgroundColor = 'blue';
-                alert("click");
+                alert("click1");
             });
 
-            input.addEventListener('focus', function () {
+            input.addEventListener('click', function () {
                 this.value = 'value changed!';
-                alert("focus");
+                alert("click2");
             });
 
         }

@@ -11,10 +11,8 @@
 
             div1.onmousedown = function (e) {
                 if (!e) e = window.event;
-
-                // e.layerX - для Firefox
-                this.innerHTML = "Событие onmouse<b>down</b> X:" + (e.offsetX == undefined ? e.layerX : e.offsetX)
-                    + " Y:" + (e.offsetY == undefined ? e.layerY : e.offsetY);
+                
+                this.innerHTML = "Событие onmouse<b>down</b> X:" + (e.offsetX) + " Y:" + (e.offsetY);
             }
 
             div2.onmousemove = function (e) {
@@ -35,6 +33,7 @@
             float: left;
             height:400px;
             width:400px;
+            color:white;
         }
         #div1 {
             background-color:red;

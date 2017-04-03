@@ -23,13 +23,23 @@
 
             setTimeout(function () {
                 text.focus(); // сработает после onclick
-            }, 4);
+            }, 0);
 
-            text.value += 'onclick-> ';
+            text.value += 'onclick1-> ';
+            text.value += 'onclick2-> ';
+            text.value += 'onclick3-> ';
+            text.value += 'onclick4-> ';
+            text.value += 'onclick5-> ';
+            text.value += 'onclick6-> ';
+            text.value += 'onclick7-> ';
+            text.value += 'onclick8-> ';
+            text.value += 'onclick9-> ';
         };
 
         text.onfocus = function () {
+            alert("Hello");
             text.value += ' !focus! ';
+            
         };
     </script>
 </body>
