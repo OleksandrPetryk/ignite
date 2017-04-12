@@ -7,9 +7,7 @@
     <title>Angular events demo!</title>
     <style>
         .wrap { height: 500px;}
-
         h1 {color: red;}
-
         #box {
             width: 200px;
             height: 200px;
@@ -52,13 +50,13 @@
                 $scope.text = '';
                 document.getElementsByTagName('input')[0].value = 'print some text here!';
             }
-            
+
             $scope.clearInput = function (e) {
                 if (e.keyCode == 8) { // backspace
                     $scope.text = $scope.text.substring(0, $scope.text.length - 1);
                 }
             }
-                       
+
             $scope.restoreWatermark = function () {
                 if (document.getElementsByTagName('input')[0].value == '') {
                     document.getElementsByTagName('input')[0].value = 'print some text here!';
@@ -73,12 +71,11 @@
 <body>
     <div class="panel panel-primary wrap" ng-controller="mainCtrl" ng-cloak ng-mousemove="getCoords($event)">
         <div class="input-group">
-            <input type="text" class="form-control" value="print some text here!" 
+            <input type="text" class="form-control" value="print some text here!"
                    ng-keypress="printInput($event)"
-                   ng-focus="clearWatermark()" 
-                   ng-keydown="clearInput($event)" 
+                   ng-focus="clearWatermark()"
+                   ng-keydown="clearInput($event)"
                    ng-blur="restoreWatermark()">
-
             <span class="input-group-btn">
                 <button class="btn btn-default" ng-click="clearText()">Clear text!</button>
             </span>

@@ -24,7 +24,7 @@
                 { name: "ng-mouseenter", apply: "Атрибут, класс", description: "Событие mouse-enter, которое срабатывает когда курсор попадает в определенную область" },
                 { name: "ng-mouseleave", apply: "Атрибут, класс", description: "Событие mouse-leave, которое срабатывает когда курсор покидает область элемента" },
                 { name: "ng-mousemove", apply: "Атрибут, класс", description: "Событие mouse-move, которое срабатывает когда курсор перемещается по поверхности элемента" },
-                { name: "ng-mouseover", apply: "Атрибут, класс", description: "Событие mouse-over, которое срабатывает когда курсор находится над элементом" },
+                { name: "ng-mouseover", apply: "Атрибут, класс", description: "Событие mouse-over, которое срабатывает когда курсор попадает на элемент (в том числе и дочерний)" },
                 { name: "ng-mouseup", apply: "Атрибут, класс", description: "Событие mouse-up, которое срабатывает когда клавиша мыши отпущена" },
                 { name: "ng-submit", apply: "Атрибут, класс", description: "Событие submit, которое срабатывает когда в элементе form была нажата кнопка Submit" }
             ]
@@ -44,7 +44,7 @@
             <tr>
                 <td>{{item.name}}</td>
                 <td>{{item.apply}}</td>
-                <td>{{item.description}}</td>
+                <td style="color:#f9f9f9" >{{item.description}}</td>
             </tr>
         </tbody>
     </table>
