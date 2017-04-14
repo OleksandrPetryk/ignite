@@ -11,7 +11,7 @@
 	
     // в AngularJS есть возможность создавать свои фильтры. 
         var app = angular.module('myApp', [])
-        .controller('mainCtrl', function ($scope) {
+        app.controller('mainCtrl', function ($scope) {
             $scope.items = [{ name: "Item 1", price: 10.9,  category: "Category 1", count: 10, tax: 1.12, expiration: 10 },
                             { name: "Item 2", price: 1.1,   category: "Category 1", count: 8,  tax: 0.55, expiration: 12 },
                             { name: "Item 3", price: 2.6,   category: "Category 2", count: 7,  tax: 0.22, expiration: 5 },
@@ -23,7 +23,7 @@
 
         })
 		// для создания фильтра передаются 2 параметра финкции filter
-        .filter('skipItems', function () {
+        app.filter('skipItems', function () {
 		// первый параметр - имя фильтра 
 		// второй параметр - функция, которая возвращает функцию для фильтрации элементов  
 		
@@ -40,7 +40,6 @@
                 return arr; 
             }
         })
-
 
     </script>
 </head>
