@@ -10,7 +10,7 @@
     <title>Routing</title>
     <script>
         var app = angular.module('myApp', ['ngRoute'])
-         .config(function ($routeProvider) {
+        .config(function ($routeProvider) {
 
                  $routeProvider
                      .when('/', {
@@ -32,8 +32,6 @@
         .controller('sampleViewCtrl', function ($scope) {
             $scope.output = 'sampleViewCtrl works!'; 
         })
-
-
     </script>
 </head>
 <body>

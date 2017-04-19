@@ -51,10 +51,9 @@
         .controller('mainCtrl', function ($scope) {
 
             $scope.showMsg = function () {
-                $scope.message = 'userName: ' + $scope.newUser.name;
-                $scope.message += 'userEmail: ' + $scope.newUser.email;
+                $scope.msg = 'userName: ' + $scope.newUser.name;
+                $scope.msg += 'userEmail: ' + $scope.newUser.email;
             }
-
 
             $scope.addNewUser = function (userDetails, isvalid) {
                 if (isvalid) {
@@ -78,7 +77,6 @@
                 }
             }
         })
-
 
     </script>
 </head>
@@ -108,7 +106,8 @@
             <input class="btn-lg btn-info" type="submit" ng-click="showMsg()"> <br />
         </form>
         <div class="panel">
-            <span>{{message}}</span>
+            <div>{{message}}</div> 
+            <div>{{msg}}</div>
         </div>
     </div>
 </body>

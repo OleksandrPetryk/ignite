@@ -11,7 +11,7 @@
         angular.module("myApp", [])
         .controller("mainCtrl", function ($scope, $parse) {
 
-            $scope.expr = "name";
+            $scope.expr = "age + 1";
             var model = { name: "Ivan", age: 20 };
 
             $scope.parseExpression = function () {

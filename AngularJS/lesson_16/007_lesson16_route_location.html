@@ -26,7 +26,6 @@
                   .otherwise({
                       redirectTo: '/'
                   })
-
         
         })
         .controller('mainCtrl', function ($scope, $location) {
@@ -46,10 +45,11 @@
 </head>
 <body>
     <div class="panel panel-primary" ng-controller="mainCtrl">
+        <h1>Example 7</h1>
         <div class="panel panel-primary well">
             <input class="btn-lg btn-info" ng-click="goHome()" type="button" value="Home">
             <input class="btn-lg btn-info" ng-click="goToSampleView()" type="button" value="sampleView">
-            <input class="btn-lg btn-info" ng-click="goToDetails()" type="button" value="About">
+            <input class="btn-lg btn-info" ng-click="goToDetails()" type="button" value="about">
         </div>
         <div class="panel" ng-view></div>
     </div>

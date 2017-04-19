@@ -60,6 +60,10 @@
             clickCounterProvider.enableCounterLimit(true, 10);
 
         })
+        .config(function (clickCounterProvider) {
+                clickCounterProvider.enableCounterLimit(true, 5);
+
+            })
  
        .controller('mainCtrl', function ($scope, clickCounter) {
            $scope.msg = 'clicks: ';
