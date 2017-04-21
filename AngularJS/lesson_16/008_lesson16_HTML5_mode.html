@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <script src="Libraries/angular.js"></script>
     <script src="Libraries/angular_route.js"></script> 
-        <link href="Libraries/bootstrap.css" rel="stylesheet" />
+    <link href="Libraries/bootstrap.css" rel="stylesheet" />
 
     <title>Routing</title>
     <script>
@@ -26,7 +26,7 @@
                       redirectTo: '/'
                   })
 
-              $locationProvider.html5Mode(false);
+              $locationProvider.html5Mode(true);
         })
          //.controller('mainCtrl', function ($scope, $location) {
          //    $scope.goHome = function () {
@@ -50,9 +50,9 @@
         <h1>Example 8</h1>
         <div class="panel panel-primary well">
             <ul class="nav nav-tabs">
-                <li><a href="#/home">Home</a></li>
-                <li><a href="#/sampleView">SampleView</a></li>
-                <li><a href="#/about">About</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/sampleView">SampleView</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div>
 

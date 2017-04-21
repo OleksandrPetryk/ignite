@@ -12,9 +12,10 @@
             return {
                 restrict: 'A',
                 templateUrl: 'templates/template1.html',
-                scope: { },
+                scope: { iScope: "@prop" },
                 //создание контроллера непосредственно в директиве
-                controller: function ($scope, $interval) {
+                controller: function ($scope, $interval, $log) {
+
                     $scope.counter = 0;
                     var interval;
 
@@ -27,6 +28,8 @@
                     $scope.stopCounter = function () {
                         $interval.cancel(interval);
                     }
+
+                    $log.log($scope);
                 }
             }
         })
@@ -35,7 +38,7 @@
 </head>
 <body>
     <div class="panel">
-        <div test-dir>
+        <div test-dir prop="Hello from prop attribute"> 
 
         </div>
     </div>

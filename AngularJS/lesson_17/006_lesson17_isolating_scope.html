@@ -27,6 +27,7 @@
         .directive('secondDir', function () {
 
             return {
+                
                 template: '<h1>message from second directive: &nbsp; {{message}}</h1>',
                 restrict: 'A',
                 scope: true //директива имеет свой scope, который прототипно наследует от родительского scope
