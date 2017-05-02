@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <base href="/" />
+    <meta charset="UTF-8">
+    <title>class16.2</title>
+    <script src="Libraries/angular.js"></script>
+    <script src="Libraries/angular_route.js"></script>
+    <link href="Libraries/bootstrap.css" rel="stylesheet" />
+
+    <script>
+        var app = angular.module('myApp', ['ngRoute'])
+        .config(function ($routeProvider, $locationProvider) {
+            $routeProvider
+                  .when('/', {
+                      templateUrl: 'views/index.html',
+                  })
+                  .when('/view1', {
+                      templateUrl: 'views/view1.html',
+                  })
+                  //.when('/view2', {
+                  //    templateUrl: 'views/view2.html'
+                  //})
+                  .otherwise({
+                      redirectTo: '/'
+                  })
+            $locationProvider.html5Mode(true);
+        })
+        .controller('mainCtrl', function ($scope, $location) {
+           $scope.goHome = function () {
+              $location.path('/');
+           };
+           $scope.goToView1 = function () {
+              $location.path('/view1')
+           };
+           $scope.goToView2 = function () {
+              $location.path('/view2')
+           }
+        })
+    </script>
+
+</head>
+<body>
+    <div class="panel panel-primary" ng-controller="mainCtrl">
+        <div class="panel panel-primary well">
+            <input class="btn-lg btn-info" ng-click="goHome()" type="button" value="Home">
+            <input class="btn-lg btn-info" ng-click="goToView1()" type="button" value="View1">
+            <input class="btn-lg btn-info" ng-click="goToView2()" type="button" value="View2">
+        </div>
+        <div class="panel" ng-view></div>
+    </div>
+</body>
+</html>
