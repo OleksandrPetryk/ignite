@@ -22,4 +22,4 @@ var ReactDOM = require('react-dom');
 
         var container = document.getElementById('example'); 
 
-        ReactDOM.render(<Greeting color="red"/>, container); 
+        ReactDOM.render(<Greeting />, container); 

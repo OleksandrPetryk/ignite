@@ -53,13 +53,13 @@
 	//JSX позволяет указать дочерние узлы используя XML синтаксис
 	
 	var app = React.createElement(
-	        'nav',
-	        null,
-	        React.createElement(
-	                'header',
-	                null,
-	                'Hello!'
-	        )
+	     'nav',
+	     null,
+	     React.createElement(
+	          'header',
+	          null,
+	          'Hello!'
+	     )
 	);
 	var container = document.getElementById('example');
 	

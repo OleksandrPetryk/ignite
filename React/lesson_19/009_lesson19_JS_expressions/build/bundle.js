@@ -50,7 +50,7 @@
 	var React = __webpack_require__(/*! react */ 1);
 	var ReactDOM = __webpack_require__(/*! react-dom */ 34);
 	
-	window.cls = 'panel well';
+	let cls = 'panel well';
 	
 	window.val1 = 'Disabled button';
 	window.val2 = 'Button!';
@@ -65,7 +65,7 @@
 	        //использование выражения в качестве атрибута 
 	        return React.createElement(
 	            'div',
-	            { className: window.cls },
+	            { className: cls },
 	            React.createElement(DemoComponent.Btn1, null),
 	            React.createElement(DemoComponent.Btn2, null)
 	        );

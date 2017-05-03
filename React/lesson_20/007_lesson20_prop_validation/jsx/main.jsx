@@ -20,7 +20,7 @@ var ReactDOM = require('react-dom');
                 //optionalObject: React.PropTypes.object,
                 //optionalString: React.PropTypes.string,
 
-                // Все, что может бать отрендерено: numbers, strings, elements или array содержит эти типы.
+                // Все, что может быть отрендерено: numbers, strings, elements или array содержит эти типы.
                 //optionalNode: React.PropTypes.node,
 
                 // React элемент.

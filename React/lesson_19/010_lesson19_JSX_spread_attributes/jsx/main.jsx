@@ -1,7 +1,7 @@
 ﻿var React = require('react'); 
 var ReactDOM = require('react-dom'); 
 
-        var props = {
+        var p = {
             prop1: 1, 
             prop2: 2, 
             prop3: 3
@@ -20,4 +20,4 @@ var ReactDOM = require('react-dom');
 
         var container = document.getElementById('example');  
         // spread атрибуты передаются компоненту в качестве свойств с помощью такой записи: 
-        ReactDOM.render(<PropsDemo {...props} />, container); 
+        ReactDOM.render(<PropsDemo {...p} />, container); 

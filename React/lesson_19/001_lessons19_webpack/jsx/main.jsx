@@ -29,4 +29,5 @@ var Component = React.createClass({
 }
 });
 var container = document.getElementById("example")
+
 ReactDOM.render(<Component/>, container);

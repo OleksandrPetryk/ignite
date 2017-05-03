@@ -2,7 +2,7 @@
 var ReactDOM = require('react-dom'); 
 
 
-        window.cls = 'panel well'; 
+        let cls = 'panel well'; 
 
         window.val1 = 'Disabled button'; 
         window.val2 = 'Button!'; 
@@ -13,7 +13,7 @@ var ReactDOM = require('react-dom');
         var DemoComponent = React.createClass({
             render: function() {
                 //использование выражения в качестве атрибута 
-                return (<div className={window.cls}>
+                return (<div className={cls}>
                     <DemoComponent.Btn1/>
                     <DemoComponent.Btn2/>
                 </div>)

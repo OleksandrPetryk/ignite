@@ -79,6 +79,7 @@
 	    }
 	});
 	var container = document.getElementById("example");
+	
 	ReactDOM.render(React.createElement(Component, null), container);
 
 /***/ },

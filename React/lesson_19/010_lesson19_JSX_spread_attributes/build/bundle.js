@@ -50,7 +50,7 @@
 	var React = __webpack_require__(/*! react */ 1);
 	var ReactDOM = __webpack_require__(/*! react-dom */ 34);
 	
-	var props = {
+	var p = {
 	    prop1: 1,
 	    prop2: 2,
 	    prop3: 3
@@ -84,7 +84,7 @@
 	
 	var container = document.getElementById('example');
 	// spread атрибуты передаются компоненту в качестве свойств с помощью такой записи: 
-	ReactDOM.render(React.createElement(PropsDemo, props), container);
+	ReactDOM.render(React.createElement(PropsDemo, p), container);
 
 /***/ },
 /* 1 */

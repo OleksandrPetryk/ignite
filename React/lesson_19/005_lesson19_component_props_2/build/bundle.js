@@ -79,7 +79,7 @@
 	
 	var container = document.getElementById('example');
 	
-	ReactDOM.render(React.createElement(Greeting, { color: 'red' }), container);
+	ReactDOM.render(React.createElement(Greeting, null), container);
 
 /***/ },
 /* 1 */
