@@ -57,10 +57,10 @@
 	//функция-стрелка
 	var a = 1,
 	    b = 2;
-	var count = function count(_count) {
+	var c = function c(count) {
 	    return alert(a + b);
 	};
-	count(); // 3 
+	c(); // 3 
 	
 	//Слева от => находится аргумент, а справа – выражение, которое нужно вернуть. 
 	var arr = [1, 2, 3, 4, 5];

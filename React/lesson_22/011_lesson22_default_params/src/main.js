@@ -11,7 +11,6 @@ var num = 5;
 function sum(a = num * 2, b = 20) {
     alert(a + b); 
 } 
-
     sum(5); // 25 
     sum(); // 30
         

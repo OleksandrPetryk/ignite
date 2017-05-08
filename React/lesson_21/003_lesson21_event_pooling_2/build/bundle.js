@@ -60,15 +60,12 @@
 	        alert('See console for info');
 	
 	        var eventType = event.type; // => "click"
+	        event.persist(); // удаление события из пула
 	
 	        setTimeout(function () {
-	            console.log('async event type: ' + event.type); // => null
+	            console.log('async event type: ' + event.type); // => "click"
 	            console.log('sync event type: ' + eventType); // => "click"
 	        }, 0);
-	
-	        event.persist(); // устранение события из пула; Событие будет доступно при асинхронном обращении к нему
-	
-	        this.setState({ eventType: event.type });
 	    },
 	
 	    render: function render() {

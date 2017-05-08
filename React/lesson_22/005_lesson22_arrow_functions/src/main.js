@@ -5,8 +5,8 @@
 
 //функция-стрелка
 let a = 1, b = 2;
-let count = count => alert(a + b);
-count(); // 3 
+let c = count => alert(a + b);
+c(); // 3 
 
 //Слева от => находится аргумент, а справа – выражение, которое нужно вернуть. 
 var arr = [1, 2, 3, 4, 5];
@@ -17,7 +17,7 @@ var bob = {
     name: "Bob",
     friends: ['John', 'Vasya'],
     printFriends() {
-        this.friends.forEach(f =>
+        this.friends.forEach((f) =>
             // this внутри функции f относится к объекту bob
             console.log(this.name + " knows " + f));
     }

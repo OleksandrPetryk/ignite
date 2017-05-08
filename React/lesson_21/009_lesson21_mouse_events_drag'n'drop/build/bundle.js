@@ -67,18 +67,16 @@
 	
 	    dragStartHandler: function dragStartHandler(e) {
 	        e.target.style.backgroundColor = 'blue';
-	        e.dataTransfer.effectAllowed = 'move';
 	        e.dataTransfer.setData('text/plain', e.target.id);
 	        return true;
 	    },
 	
 	    dragOverHandler: function dragOverHandler(e) {
-	
 	        e.preventDefault();
 	    },
 	
 	    dropHandler: function dropHandler(e) {
-	
+	        e.preventDefault();
 	        var data = e.dataTransfer.getData("text/plain");
 	        e.target.appendChild(document.getElementById(data));
 	

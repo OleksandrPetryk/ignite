@@ -69,13 +69,19 @@
 	    },
 	
 	    keyDownHandler: function keyDownHandler(e) {
-	        this.setState({ keyDownProps: 'altKey: ' + e.altKey + '\n\r' + 'charCode: ' + e.charCode + '\n\r' + 'ctrlKey: ' + e.ctrlKey + '\n\r' + 'getModifierState(key): ' + e.getModifierState(e.key) + '\n\r' + 'key: ' + e.key + '\n\r' + 'keyCode: ' + e.keyCode + '\n\r' + 'metaKey: ' + e.metaKey + '\n\r' + 'repeat: ' + e.repeat + '\n\r' + 'shiftKey: ' + e.shiftKey + '\n\r' + 'which: ' + e.which });
+	        this.setState({
+	            keyDownProps: 'altKey: ' + e.altKey + '\n\r' + 'charCode: ' + e.charCode + '\n\r' + 'ctrlKey: ' + e.ctrlKey + '\n\r' + 'getModifierState(key): ' + e.getModifierState(e.key) + '\n\r' + 'key: ' + e.key + '\n\r' + 'keyCode: ' + e.keyCode + '\n\r' + 'metaKey: ' + e.metaKey + '\n\r' + 'repeat: ' + e.repeat + '\n\r' + 'shiftKey: ' + e.shiftKey + '\n\r' + 'which: ' + e.which
+	        });
 	    },
 	    keyUpHandler: function keyUpHandler(e) {
-	        this.setState({ keyUpProps: 'altKey: ' + e.altKey + '\n\r' + 'charCode: ' + e.charCode + '\n\r' + 'ctrlKey: ' + e.ctrlKey + '\n\r' + 'getModifierState(key): ' + e.getModifierState(e.key) + '\n\r' + 'key: ' + e.key + '\n\r' + 'keyCode: ' + e.keyCode + '\n\r' + 'metaKey: ' + e.metaKey + '\n\r' + 'repeat: ' + e.repeat + '\n\r' + 'shiftKey: ' + e.shiftKey + '\n\r' + 'which: ' + e.which });
+	        this.setState({
+	            keyUpProps: 'altKey: ' + e.altKey + '\n\r' + 'charCode: ' + e.charCode + '\n\r' + 'ctrlKey: ' + e.ctrlKey + '\n\r' + 'getModifierState(key): ' + e.getModifierState(e.key) + '\n\r' + 'key: ' + e.key + '\n\r' + 'keyCode: ' + e.keyCode + '\n\r' + 'metaKey: ' + e.metaKey + '\n\r' + 'repeat: ' + e.repeat + '\n\r' + 'shiftKey: ' + e.shiftKey + '\n\r' + 'which: ' + e.which
+	        });
 	    },
 	    keyPressHandler: function keyPressHandler(e) {
-	        this.setState({ keyPressProps: 'altKey: ' + e.altKey + '\n\r' + 'charCode: ' + e.charCode + '\n\r' + 'ctrlKey: ' + e.ctrlKey + '\n\r' + 'getModifierState(key): ' + e.getModifierState(e.key) + '\n\r' + 'key: ' + e.key + '\n\r' + 'keyCode: ' + e.keyCode + '\n\r' + 'metaKey: ' + e.metaKey + '\n\r' + 'repeat: ' + e.repeat + '\n\r' + 'shiftKey: ' + e.shiftKey + '\n\r' + 'which: ' + e.which });
+	        this.setState({
+	            keyPressProps: 'altKey: ' + e.altKey + '\n\r' + 'charCode: ' + e.charCode + '\n\r' + 'ctrlKey: ' + e.ctrlKey + '\n\r' + 'getModifierState(key): ' + e.getModifierState(e.key) + '\n\r' + 'key: ' + e.key + '\n\r' + 'keyCode: ' + e.keyCode + '\n\r' + 'metaKey: ' + e.metaKey + '\n\r' + 'repeat: ' + e.repeat + '\n\r' + 'shiftKey: ' + e.shiftKey + '\n\r' + 'which: ' + e.which
+	        });
 	    },
 	
 	    render: function render() {

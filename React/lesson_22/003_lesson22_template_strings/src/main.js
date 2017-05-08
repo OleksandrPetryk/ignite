@@ -14,7 +14,7 @@ console.log(`this is a multiline template string
             string text line 2`);
 
 //интерполяция переменных 
-var name = 'Bob', age = '25';
+let name = 'Bob', age = '25';
 console.log(`Hello, my name is ${name} and I am ${age} years old!`);
 //console.log("Hello, my name is" + (name + age) + "and I am ${age} years old!");
 

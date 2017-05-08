@@ -42,54 +42,30 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!****************************************!*\
-  !*** ./002_lesson22_const/src/main.js ***!
-  \****************************************/
+/*!*******************************************************!*\
+  !*** ./009_lesson22_object_destructuring/src/main.js ***!
+  \*******************************************************/
 /***/ function(module, exports) {
 
 	'use strict';
 	
-	function constTest1() {
-	    var x = 1;
-	    alert(x);
+	//Деструктуризация (destructuring assignment) – это особый синтаксис присваивания, 
+	//при котором можно присвоить массив или объект сразу нескольким переменным, разбив его на части.
 	
-	    //x = 2; ==> ошибка! 
-	    //alert(x); 
-	}
-	constTest1();
-	
-	function constTest2() {
-	    var x = 1;
-	    alert(x);
-	
-	    //x = 2; ==> ошибка! 
-	    //alert(x); 
-	}
-	constTest2();
-	
-	var testObj = {
-	    a: 'Hello',
-	    b: 1
+	var options = {
+	  title: "a new web site",
+	  width: 100,
+	  height: 200
 	};
 	
-	// Особенность const при работе с объектами и массивами следующая: 
-	// Переопределение свойств объекта / элементов массива разрешается 
-	// Непосредственное переопределение константы запрещается 
+	var title = options.title;
+	var width = options.width;
+	var height = options.height;
 	
-	testObj.a = 'Hi';
-	alert(testObj.a); // 'Hi'
 	
-	// testObj = 'Hi' // => ошибка! попытка переопределения константы 
-	
-	var testArr = [1, 2, 3, 4, 5];
-	
-	for (var i = 0; i < testArr.length; i++) {
-	    testArr[i] = ++testArr[i];
-	}
-	
-	alert(testArr); // 2, 3, 4, 5, 6 
-	
-	// testArr = 1 // => ошибка! попытка переопределения константы
+	alert(title); // a new web site
+	alert(width); // 100
+	alert(height); // 200
 
 /***/ }
 /******/ ]);

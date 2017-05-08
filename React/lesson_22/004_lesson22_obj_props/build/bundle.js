@@ -67,10 +67,11 @@
 	
 	//ES6: сокращенное присвоение значений свойствам объекта 
 	var obj = { x: x, y: y, z: z };
+	
+	alert(obj.x);
 	obj.x = 10;
 	alert(obj.x); // 10 
 	alert(x); // 1
-	
 	
 	// ES6 поддерживает вычисляемые имена свойств объекта 
 	var obj1 = (0, _defineProperty3.default)({

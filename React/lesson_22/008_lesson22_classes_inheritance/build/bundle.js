@@ -93,7 +93,7 @@
 	            alert("I walk: " + this.name);
 	        }
 	
-	        //value: "val"
+	        //get value() { return "val" };
 	
 	    }]);
 	    return Animal;
@@ -106,9 +106,8 @@
 	        value: function walk() {
 	            //обращение к родителю т.е Animal 
 	            (0, _get3.default)(Rabbit.prototype.__proto__ || (0, _getPrototypeOf2.default)(Rabbit.prototype), "walk", this).call(this);
-	            //alert(super.value);
-	
-	            //alert("I walk: " + this.name);
+	            //console.log(super.value);
+	            //console.log("I walk: " + this.name);
 	        }
 	    }]);
 	
@@ -126,9 +125,6 @@
 	}(Animal);
 	
 	new Rabbit("Rabbit").walk();
-	// I walk: Rabbit
-	// and jump!
-	//alert(Rabbit.prototype.__proto__ == Animal.prototype); // true
 
 /***/ },
 /* 1 */,

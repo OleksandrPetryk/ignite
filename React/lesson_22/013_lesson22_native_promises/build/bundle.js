@@ -44,7 +44,7 @@
 
 /***/ 0:
 /*!**************************************************!*\
-  !*** ./014_lesson22_native_promises/src/main.js ***!
+  !*** ./013_lesson22_native_promises/src/main.js ***!
   \**************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
@@ -55,7 +55,7 @@
 	
 	// Создаётся объект promise
 	
-	var _promise = __webpack_require__(/*! babel-runtime/core-js/promise */ 580);
+	var _promise = __webpack_require__(/*! babel-runtime/core-js/promise */ 280);
 	
 	var _promise2 = _interopRequireDefault(_promise);
 	
@@ -1107,17 +1107,17 @@
 
 /***/ },
 
-/***/ 580:
+/***/ 280:
 /*!********************************************!*\
   !*** ./~/babel-runtime/core-js/promise.js ***!
   \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/promise */ 581), __esModule: true };
+	module.exports = { "default": __webpack_require__(/*! core-js/library/fn/promise */ 281), __esModule: true };
 
 /***/ },
 
-/***/ 581:
+/***/ 281:
 /*!*****************************************!*\
   !*** ./~/core-js/library/fn/promise.js ***!
   \*****************************************/
@@ -1126,12 +1126,12 @@
 	__webpack_require__(/*! ../modules/es6.object.to-string */ 93);
 	__webpack_require__(/*! ../modules/es6.string.iterator */ 65);
 	__webpack_require__(/*! ../modules/web.dom.iterable */ 50);
-	__webpack_require__(/*! ../modules/es6.promise */ 582);
+	__webpack_require__(/*! ../modules/es6.promise */ 282);
 	module.exports = __webpack_require__(/*! ../modules/_core */ 7).Promise;
 
 /***/ },
 
-/***/ 582:
+/***/ 282:
 /*!**************************************************!*\
   !*** ./~/core-js/library/modules/es6.promise.js ***!
   \**************************************************/
@@ -1145,11 +1145,11 @@
 	  , $export            = __webpack_require__(/*! ./_export */ 5)
 	  , isObject           = __webpack_require__(/*! ./_is-object */ 13)
 	  , aFunction          = __webpack_require__(/*! ./_a-function */ 9)
-	  , anInstance         = __webpack_require__(/*! ./_an-instance */ 583)
-	  , forOf              = __webpack_require__(/*! ./_for-of */ 584)
-	  , speciesConstructor = __webpack_require__(/*! ./_species-constructor */ 587)
-	  , task               = __webpack_require__(/*! ./_task */ 588).set
-	  , microtask          = __webpack_require__(/*! ./_microtask */ 590)()
+	  , anInstance         = __webpack_require__(/*! ./_an-instance */ 283)
+	  , forOf              = __webpack_require__(/*! ./_for-of */ 284)
+	  , speciesConstructor = __webpack_require__(/*! ./_species-constructor */ 287)
+	  , task               = __webpack_require__(/*! ./_task */ 288).set
+	  , microtask          = __webpack_require__(/*! ./_microtask */ 290)()
 	  , PROMISE            = 'Promise'
 	  , TypeError          = global.TypeError
 	  , process            = global.process
@@ -1341,7 +1341,7 @@
 	    this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
 	    this._n = false;          // <- notify
 	  };
-	  Internal.prototype = __webpack_require__(/*! ./_redefine-all */ 591)($Promise.prototype, {
+	  Internal.prototype = __webpack_require__(/*! ./_redefine-all */ 291)($Promise.prototype, {
 	    // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
 	    then: function then(onFulfilled, onRejected){
 	      var reaction    = newPromiseCapability(speciesConstructor(this, $Promise));
@@ -1368,7 +1368,7 @@
 	
 	$export($export.G + $export.W + $export.F * !USE_NATIVE, {Promise: $Promise});
 	__webpack_require__(/*! ./_set-to-string-tag */ 61)($Promise, PROMISE);
-	__webpack_require__(/*! ./_set-species */ 592)(PROMISE);
+	__webpack_require__(/*! ./_set-species */ 292)(PROMISE);
 	Wrapper = __webpack_require__(/*! ./_core */ 7)[PROMISE];
 	
 	// statics
@@ -1392,7 +1392,7 @@
 	    return capability.promise;
 	  }
 	});
-	$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-detect */ 593)(function(iter){
+	$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(/*! ./_iter-detect */ 293)(function(iter){
 	  $Promise.all(iter)['catch'](empty);
 	})), PROMISE, {
 	  // 25.4.4.1 Promise.all(iterable)
@@ -1439,7 +1439,7 @@
 
 /***/ },
 
-/***/ 583:
+/***/ 283:
 /*!***************************************************!*\
   !*** ./~/core-js/library/modules/_an-instance.js ***!
   \***************************************************/
@@ -1453,15 +1453,15 @@
 
 /***/ },
 
-/***/ 584:
+/***/ 284:
 /*!**********************************************!*\
   !*** ./~/core-js/library/modules/_for-of.js ***!
   \**********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var ctx         = __webpack_require__(/*! ./_ctx */ 8)
-	  , call        = __webpack_require__(/*! ./_iter-call */ 585)
-	  , isArrayIter = __webpack_require__(/*! ./_is-array-iter */ 586)
+	  , call        = __webpack_require__(/*! ./_iter-call */ 285)
+	  , isArrayIter = __webpack_require__(/*! ./_is-array-iter */ 286)
 	  , anObject    = __webpack_require__(/*! ./_an-object */ 12)
 	  , toLength    = __webpack_require__(/*! ./_to-length */ 29)
 	  , getIterFn   = __webpack_require__(/*! ./core.get-iterator-method */ 72)
@@ -1487,7 +1487,7 @@
 
 /***/ },
 
-/***/ 585:
+/***/ 285:
 /*!*************************************************!*\
   !*** ./~/core-js/library/modules/_iter-call.js ***!
   \*************************************************/
@@ -1508,7 +1508,7 @@
 
 /***/ },
 
-/***/ 586:
+/***/ 286:
 /*!*****************************************************!*\
   !*** ./~/core-js/library/modules/_is-array-iter.js ***!
   \*****************************************************/
@@ -1525,7 +1525,7 @@
 
 /***/ },
 
-/***/ 587:
+/***/ 287:
 /*!***********************************************************!*\
   !*** ./~/core-js/library/modules/_species-constructor.js ***!
   \***********************************************************/
@@ -1542,14 +1542,14 @@
 
 /***/ },
 
-/***/ 588:
+/***/ 288:
 /*!********************************************!*\
   !*** ./~/core-js/library/modules/_task.js ***!
   \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var ctx                = __webpack_require__(/*! ./_ctx */ 8)
-	  , invoke             = __webpack_require__(/*! ./_invoke */ 589)
+	  , invoke             = __webpack_require__(/*! ./_invoke */ 289)
 	  , html               = __webpack_require__(/*! ./_html */ 60)
 	  , cel                = __webpack_require__(/*! ./_dom-create */ 17)
 	  , global             = __webpack_require__(/*! ./_global */ 6)
@@ -1626,7 +1626,7 @@
 
 /***/ },
 
-/***/ 589:
+/***/ 289:
 /*!**********************************************!*\
   !*** ./~/core-js/library/modules/_invoke.js ***!
   \**********************************************/
@@ -1651,14 +1651,14 @@
 
 /***/ },
 
-/***/ 590:
+/***/ 290:
 /*!*************************************************!*\
   !*** ./~/core-js/library/modules/_microtask.js ***!
   \*************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var global    = __webpack_require__(/*! ./_global */ 6)
-	  , macrotask = __webpack_require__(/*! ./_task */ 588).set
+	  , macrotask = __webpack_require__(/*! ./_task */ 288).set
 	  , Observer  = global.MutationObserver || global.WebKitMutationObserver
 	  , process   = global.process
 	  , Promise   = global.Promise
@@ -1728,7 +1728,7 @@
 
 /***/ },
 
-/***/ 591:
+/***/ 291:
 /*!****************************************************!*\
   !*** ./~/core-js/library/modules/_redefine-all.js ***!
   \****************************************************/
@@ -1744,7 +1744,7 @@
 
 /***/ },
 
-/***/ 592:
+/***/ 292:
 /*!***************************************************!*\
   !*** ./~/core-js/library/modules/_set-species.js ***!
   \***************************************************/
@@ -1767,7 +1767,7 @@
 
 /***/ },
 
-/***/ 593:
+/***/ 293:
 /*!***************************************************!*\
   !*** ./~/core-js/library/modules/_iter-detect.js ***!
   \***************************************************/

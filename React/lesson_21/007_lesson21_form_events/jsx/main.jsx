@@ -24,7 +24,7 @@ var ReactDOM = require('react-dom');
                 }
             }, 
             handleInputValChange: function(e) { 
-                var testVal = /^[0-9]/;
+                var testVal = /[0-9]/;
                 this.setState({inputVal: e.target.value}) 
 
                 if (document.getElementsByTagName('input')[0].value.search(testVal) != -1) {

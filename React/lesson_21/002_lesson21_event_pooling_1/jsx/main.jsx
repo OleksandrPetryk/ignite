@@ -21,8 +21,6 @@ var ReactDOM = require('react-dom');
                         console.log('sync event type: ' + eventType); // => "click" 
 				
                     }, 0);
-
-                
             }, 
  
             render: function() {

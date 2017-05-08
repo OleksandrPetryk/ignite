@@ -43,7 +43,7 @@
 /******/ ([
 /* 0 */
 /*!*****************************************************!*\
-  !*** ./009_lesson22_es6_classes_react/src/main.jsx ***!
+  !*** ./010_lesson22_es6_classes_react/src/main.jsx ***!
   \*****************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
@@ -83,10 +83,10 @@
 	
 	        var _this = (0, _possibleConstructorReturn3.default)(this, (Counter.__proto__ || (0, _getPrototypeOf2.default)(Counter)).call(this, props));
 	
-	        _this.state = { count: props.initialCount };
+	        _this.state = { count: +props.initialCount };
 	
-	        // для того, чтобы ключевое слово this можно было использовать в качестве ссылки на текущий React класс, 
-	        // следует использовать метод bind в конструкторе класса 
+	        // для того, чтобы ключевое слово this можно было использовать в качестве ссылки на текущий React класс,
+	        // следует использовать метод bind в конструкторе класса
 	        _this.tick = _this.tick.bind(_this);
 	        return _this;
 	    }
@@ -110,11 +110,8 @@
 	    return Counter;
 	}(React.Component);
 	
-	Counter.propTypes = { initialCount: React.PropTypes.number };
-	Counter.defaultProps = { initialCount: 0 };
-	
 	var container = document.getElementById('example');
-	ReactDOM.render(React.createElement(Counter, null), container);
+	ReactDOM.render(React.createElement(Counter, { initialCount: '0' }), container);
 
 /***/ },
 /* 1 */,

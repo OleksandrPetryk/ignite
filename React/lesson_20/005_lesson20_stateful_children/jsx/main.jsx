@@ -38,8 +38,7 @@ var ReactDOM = require('react-dom');
                     <li id="0" style={{"color": this.state.colors[0], "fontSize":30 }}>{this.state.val1}</li>
                     <li id="1" style={{"color": this.state.colors[1]}}>{this.state.val2}</li>
                     <li id="2" style={{"color": this.state.colors[2]}}>{this.state.val3}</li>
-                </ul>
-                
+                </ul>                
             )}
         })
 

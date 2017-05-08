@@ -14,18 +14,16 @@ var ReactDOM = require('react-dom');
 
             dragStartHandler: function(e) {
                 e.target.style.backgroundColor = 'blue';
-                e.dataTransfer.effectAllowed = 'move';
                 e.dataTransfer.setData('text/plain', e.target.id); 
                 return true;
             }, 
             
             dragOverHandler: function(e) { 
-      
                 e.preventDefault();   
             }, 
 
             dropHandler: function(e) {
-                
+                e.preventDefault();
                 var data = e.dataTransfer.getData("text/plain");
                 e.target.appendChild(document.getElementById(data)); 
                

@@ -53,8 +53,8 @@
 	var ReactDOM = __webpack_require__(/*! react-dom */ 34);
 	
 	// В ReactJS по умолчанию события обрабатываются на этапе всплытия(bubbling phase)
-	// Для обработки события на этапе перехвата(capturing phase) добавьте Capture к названию React события. 
-	// Например: onClickCapture вместо onClick 
+	// Для обработки события на этапе перехвата(capturing phase) добавьте Capture к названию React события.
+	// Например: onClickCapture вместо onClick
 	var Demo = React.createClass({
 	    displayName: 'Demo',
 	

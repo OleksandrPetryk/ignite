@@ -60,12 +60,12 @@
 	
 	
 	    focusHandler: function focusHandler(e) {
-	        alert('focus!');
+	        e.stopPropagation();
 	        e.target.style.backgroundColor = 'red';
 	    },
 	
 	    blurHandler: function blurHandler(e) {
-	        alert('blur!');
+	        e.stopPropagation();
 	        e.target.style.backgroundColor = 'transparent';
 	    },
 	
@@ -79,16 +79,12 @@
 	                React.createElement(
 	                    'label',
 	                    null,
-	                    'Input Field: ',
+	                    'Input field: ',
 	                    React.createElement('br', null),
 	                    React.createElement('input', { className: 'input-lg form-control', type: 'text', onFocus: this.focusHandler, onBlur: this.blurHandler })
 	                )
 	            ),
-	            React.createElement(
-	                'button',
-	                { onFocus: this.focusHandler, onBlur: this.blurHandler, className: 'demo' },
-	                'Click!'
-	            )
+	            React.createElement('div', { id: 'output' })
 	        );
 	    }
 	});
