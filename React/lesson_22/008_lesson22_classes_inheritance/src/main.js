@@ -14,15 +14,15 @@ class Animal {
         alert("I walk: " + this.name);
     }
 
-    //get value() { return "val" };
+    get value() { return "val" };
 }
 
 class Rabbit extends Animal {
     walk() {
         //обращение к родителю т.е Animal 
         super.walk();
-        //console.log(super.value);
-        //console.log("I walk: " + this.name);
+        console.log(super.value);
+        console.log("I walk: " + this.name);
     }
 
     constructor() {

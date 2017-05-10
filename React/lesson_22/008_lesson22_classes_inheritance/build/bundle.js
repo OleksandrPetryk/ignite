@@ -92,9 +92,11 @@
 	        value: function walk() {
 	            alert("I walk: " + this.name);
 	        }
-	
-	        //get value() { return "val" };
-	
+	    }, {
+	        key: "value",
+	        get: function get() {
+	            return "val";
+	        }
 	    }]);
 	    return Animal;
 	}();
@@ -106,8 +108,8 @@
 	        value: function walk() {
 	            //обращение к родителю т.е Animal 
 	            (0, _get3.default)(Rabbit.prototype.__proto__ || (0, _getPrototypeOf2.default)(Rabbit.prototype), "walk", this).call(this);
-	            //console.log(super.value);
-	            //console.log("I walk: " + this.name);
+	            console.log((0, _get3.default)(Rabbit.prototype.__proto__ || (0, _getPrototypeOf2.default)(Rabbit.prototype), "value", this));
+	            console.log("I walk: " + this.name);
 	        }
 	    }]);
 	

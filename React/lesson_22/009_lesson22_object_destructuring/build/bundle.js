@@ -58,9 +58,9 @@
 	  height: 200
 	};
 	
-	var title = options.title;
 	var width = options.width;
 	var height = options.height;
+	var title = options.title;
 	
 	
 	alert(title); // a new web site

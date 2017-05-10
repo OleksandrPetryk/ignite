@@ -5,6 +5,7 @@
 
 //функция-стрелка
 let a = 1, b = 2;
+//let c = function (count) { alert(a+b) };
 let c = count => alert(a + b);
 c(); // 3 
 

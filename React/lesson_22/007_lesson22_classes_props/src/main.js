@@ -30,7 +30,7 @@ let Person = class {
          alert("PASSED");
      }
 
-    
+    //value: "hello"
 
     // Класс, как и функция, является объектом. Статические свойства класса Person – 
     // это свойства непосредственно объекта  Person, то есть доступные из него «через точку».
@@ -44,6 +44,7 @@ let Person = class {
 
 var user_1 = new Person('Василий', 'Иванов');
 alert(user_1.fullName); // Василий Иванов
+alert(user_1.firstName ); // Василий 
 user_1.TEST(); // PASSED 
 
 let user_2 = Person.createGuest();

@@ -57,6 +57,7 @@
 	//функция-стрелка
 	var a = 1,
 	    b = 2;
+	//let c = function (count) { alert(a+b) };
 	var c = function c(count) {
 	    return alert(a + b);
 	};

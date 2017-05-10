@@ -176,7 +176,8 @@
 	        { path: '/', component: App },
 	        React.createElement(
 	            Route,
-	            { path: 'source', component: View },
+	            { path: '/view', component: View },
+	            React.createElement(Route, { path: '/view1', component: View1 }),
 	            React.createElement(Route, { path: '/view2', component: View2 })
 	        )
 	    )

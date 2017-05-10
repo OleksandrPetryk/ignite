@@ -7,7 +7,6 @@
 }
 constTest1();
 
-
 function constTest2() {
     const x = 1;
     alert(x);

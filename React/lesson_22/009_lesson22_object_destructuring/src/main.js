@@ -10,7 +10,7 @@ let options = {
 };
   
 
-let {title, width, height} = options;
+let {width, height, title} = options;
   
 alert(title);  // a new web site
 alert(width);  // 100
