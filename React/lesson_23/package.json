@@ -1,17 +1,14 @@
 {
   "version": "1.0.0",
-  "name": "asp",
-  "private": true,
+  "name": "app",
   "scripts": {
-    "build": "webpack -w",
-
-    "//": "browserify -t [ babelify --presets [ es2015 react ] ] 003_Lesson23_Browserify/demo/jsx/main.jsx -o 003_Lesson23_Browserify/demo/build/bundle.js",
-    "///": "webpack -w"
-
+    "build": "browserify -t [ babelify --presets [ es2015 react ] ] 003_Lesson23_Browserify/demo/jsx/main.jsx -o 003_Lesson23_Browserify/demo/build/bundle.js",
+    "watch": "watchify -t [ babelify --presets [ es2015 react ] ] 003_Lesson23_Browserify/demo/jsx/main.jsx -o 003_Lesson23_Browserify/demo/build/bundle.js"
   },
   "dependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react": "15.3.1",
+    "react-dom": "15.3.1",
+    "bootstrap": "3.3.7"
   },
   "devDependencies": {
     "babel": "^6.5.2",

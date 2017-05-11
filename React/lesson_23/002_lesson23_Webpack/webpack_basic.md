@@ -110,6 +110,22 @@ $ npm init -y
 
 ``` 
 
+> babel-core - contains the Node API and require hook
+> 
+>babel-loader - this package allows transpiling JavaScript files using Babel and webpack.
+>
+>babel-preset-es2015 is a plugin being used by the babel-loader to translate ES6 to JavaScript.
+>
+>babel-preset-react is a plugin being used by the babel-loader to translate JSX to JavaScript. 
+>
+>babel-preset-stage-0 - this preset includes the following plugins:
+>
+> *transform-do-expressions
+>
+> *transform-function-bind
+
+
+
 * В директории с приложением создайте файл index.html со следующим кодом: 
 
 ```
