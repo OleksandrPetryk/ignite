@@ -24,8 +24,9 @@ class App extends React.Component {
             <div id="container" className="panel well">
                 <h1>React Routing Demo!</h1>
                      <ul>
-                          <li><Link to="/view/view1"><button className="btn btn-lg btn-success">View 1</button></Link></li>
-                          <li><Link to="/view/view2"><button className="btn btn-lg btn-success">View 2</button></Link></li>
+                          <li><Link to="/view"><button className="btn btn-lg btn-success">View</button></Link></li> 
+                          <li><Link to="/view1"><button className="btn btn-lg btn-success">View 1</button></Link></li>
+                          <li><Link to="/view2"><button className="btn btn-lg btn-success">View 2</button></Link></li>
                     </ul>
             </div>  
             <div className="panel">{this.props.children}</div>
@@ -41,12 +42,13 @@ class Home extends React.Component {
 }
 
 // как и обычные React компоненты, компоненты Route поддерживают различные уровни вложенности  
-ReactDOM.render(<Router history={hashHistory}>
+ReactDOM.render(
+    <Router history={hashHistory}>
         <Route path="/" component={App}>
             <Route path="/view" component={View} > 
-                <Route path="/view/view1" component={View1}/>     
-                <Route path="/view/view2" component={View2}/> 
+                <Route path="/view1" component={View1}/>     
+                <Route path="/view2" component={View2}/> 
             </Route>
-         </Route>
+        </Route>
     </Router>, document.getElementById('app')); 
 

@@ -71,9 +71,9 @@
 	var Redirect = router.Redirect;
 	
 	// импорт компонентов, переключаемых при маршрутизации(views)
-	var View = __webpack_require__(/*! ./views/view.jsx */ 242);
-	var View1 = __webpack_require__(/*! ./views/view1.jsx */ 243);
-	var View2 = __webpack_require__(/*! ./views/view2.jsx */ 244);
+	var View = __webpack_require__(/*! ./views/view.jsx */ 244);
+	var View1 = __webpack_require__(/*! ./views/view1.jsx */ 245);
+	var View2 = __webpack_require__(/*! ./views/view2.jsx */ 246);
 	
 	// В данном примере рассмотрен компонент маршрутизации react-router Redirect(перенаправление на другой URL)
 	
@@ -27924,7 +27924,9 @@
 /* 239 */,
 /* 240 */,
 /* 241 */,
-/* 242 */
+/* 242 */,
+/* 243 */,
+/* 244 */
 /*!**************************************************!*\
   !*** ./004_lesson24_redirect/jsx/views/view.jsx ***!
   \**************************************************/
@@ -27968,7 +27970,7 @@
 	module.exports = View;
 
 /***/ },
-/* 243 */
+/* 245 */
 /*!***************************************************!*\
   !*** ./004_lesson24_redirect/jsx/views/view1.jsx ***!
   \***************************************************/
@@ -28012,7 +28014,7 @@
 	module.exports = View1;
 
 /***/ },
-/* 244 */
+/* 246 */
 /*!***************************************************!*\
   !*** ./004_lesson24_redirect/jsx/views/view2.jsx ***!
   \***************************************************/

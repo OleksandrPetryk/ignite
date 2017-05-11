@@ -44,12 +44,13 @@ function greet() {
     alert('hello from view 1!');
 }
 
-ReactDOM.render(<Router history={hashHistory}>
-    <Route path="/" component={App}>
+ReactDOM.render(
+    <Router history={hashHistory}>
+     <Route path="/" component={App}>
         <IndexRoute component={Home}/> 
          {/* функция onEnter сработает при переходу по пути /view1 */}
         <Route path="view1" onEnter={greet} component={View1} />
         <Route path="view2" component={View2} />    
-    </Route>
+     </Route>
     </Router>, document.getElementById('app')); 
 

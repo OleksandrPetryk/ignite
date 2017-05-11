@@ -70,9 +70,9 @@
 	var hashHistory = router.hashHistory;
 	
 	// импорт компонентов, переключаемых при маршрутизации(views)
-	var View = __webpack_require__(/*! ./views/view.jsx */ 239);
-	var View1 = __webpack_require__(/*! ./views/view1.jsx */ 240);
-	var View2 = __webpack_require__(/*! ./views/view2.jsx */ 241);
+	var View = __webpack_require__(/*! ./views/view.jsx */ 241);
+	var View1 = __webpack_require__(/*! ./views/view1.jsx */ 242);
+	var View2 = __webpack_require__(/*! ./views/view2.jsx */ 243);
 	
 	// В данном примере рассмотрена реализация вложенных компонентов маршрутизации в react-router 
 	
@@ -107,7 +107,20 @@
 	                            null,
 	                            React.createElement(
 	                                Link,
-	                                { to: '/view/view1' },
+	                                { to: '/view' },
+	                                React.createElement(
+	                                    'button',
+	                                    { className: 'btn btn-lg btn-success' },
+	                                    'View'
+	                                )
+	                            )
+	                        ),
+	                        React.createElement(
+	                            'li',
+	                            null,
+	                            React.createElement(
+	                                Link,
+	                                { to: '/view1' },
 	                                React.createElement(
 	                                    'button',
 	                                    { className: 'btn btn-lg btn-success' },
@@ -120,7 +133,7 @@
 	                            null,
 	                            React.createElement(
 	                                Link,
-	                                { to: '/view/view2' },
+	                                { to: '/view2' },
 	                                React.createElement(
 	                                    'button',
 	                                    { className: 'btn btn-lg btn-success' },
@@ -177,8 +190,8 @@
 	        React.createElement(
 	            Route,
 	            { path: '/view', component: View },
-	            React.createElement(Route, { path: '/view/view1', component: View1 }),
-	            React.createElement(Route, { path: '/view/view2', component: View2 })
+	            React.createElement(Route, { path: '/view1', component: View1 }),
+	            React.createElement(Route, { path: '/view2', component: View2 })
 	        )
 	    )
 	), document.getElementById('app'));
@@ -27912,7 +27925,9 @@
 /* 236 */,
 /* 237 */,
 /* 238 */,
-/* 239 */
+/* 239 */,
+/* 240 */,
+/* 241 */
 /*!*******************************************************!*\
   !*** ./003_lesson24_nested_routes/jsx/views/view.jsx ***!
   \*******************************************************/
@@ -27965,7 +27980,7 @@
 	module.exports = View;
 
 /***/ },
-/* 240 */
+/* 242 */
 /*!********************************************************!*\
   !*** ./003_lesson24_nested_routes/jsx/views/view1.jsx ***!
   \********************************************************/
@@ -28009,7 +28024,7 @@
 	module.exports = View1;
 
 /***/ },
-/* 241 */
+/* 243 */
 /*!********************************************************!*\
   !*** ./003_lesson24_nested_routes/jsx/views/view2.jsx ***!
   \********************************************************/

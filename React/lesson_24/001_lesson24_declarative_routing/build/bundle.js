@@ -72,7 +72,7 @@
 	// импорт компонентов, переключаемых при маршрутизации(views)
 	var View1 = __webpack_require__(/*! ./views/view1.jsx */ 235);
 	var View2 = __webpack_require__(/*! ./views/view2.jsx */ 236);
-	var User = __webpack_require__(/*! ./views/view3.jsx */ 248);
+	var User = __webpack_require__(/*! ./views/view3.jsx */ 237);
 	
 	var userID = {};
 	userID.id = 1;
@@ -28010,18 +28010,7 @@
 	module.exports = View2;
 
 /***/ },
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */
+/* 237 */
 /*!**************************************************************!*\
   !*** ./001_lesson24_declarative_routing/jsx/views/view3.jsx ***!
   \**************************************************************/
