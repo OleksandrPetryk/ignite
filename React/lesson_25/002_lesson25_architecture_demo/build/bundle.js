@@ -22713,8 +22713,8 @@
 	        // обработчик actions 
 	
 	    }, {
-	        key: 'handleActions',
-	        value: function handleActions(action) {
+	        key: 'hActions',
+	        value: function hActions(action) {
 	
 	            switch (action.type) {
 	                case "COUNT":
@@ -22732,7 +22732,7 @@
 	
 	var appStore = new AppStore();
 	// привязка handleActions к классу appStore позволяет ссылаться на него с помощью this  
-	_dispatcher2.default.register(appStore.handleActions.bind(appStore));
+	_dispatcher2.default.register(appStore.hActions.bind(appStore));
 	
 	module.exports = appStore;
 

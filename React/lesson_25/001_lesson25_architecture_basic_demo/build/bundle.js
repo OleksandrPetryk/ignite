@@ -63,14 +63,12 @@
 	var Dispatcher = __webpack_require__(/*! flux */ 172).Dispatcher;
 	var EventEmitter = __webpack_require__(/*! events */ 175).EventEmitter;
 	
-	// Компоненты flux архитектуры: 
+	// Компоненты flux архитектуры:
 	
-	//Dispatcher / Диспетчер — принимает Действия и рассылает нагрузку зарегистрированным обработчикам 
-	
+	//Dispatcher / Диспетчер — принимает Действия и рассылает нагрузку зарегистрированным обработчикам
 	var dispatcher = new Dispatcher();
 	
 	//Actions / Действия — хелперы, упрощающие передачу данных Диспетчеру
-	
 	function emitClick() {
 	    dispatcher.dispatch({
 	        type: 'CLICK'
@@ -91,14 +89,11 @@
 	    _createClass(AppStore, [{
 	        key: 'handleActions',
 	        value: function handleActions(action) {
-	
 	            switch (action.type) {
 	                case 'CLICK':
 	                    {
 	                        console.log(this);
-	
 	                        this.emit('showText');
-	
 	                        break;
 	                    }
 	            }
@@ -109,10 +104,11 @@
 	}(EventEmitter);
 	
 	var appStore = new AppStore();
-	// привязка handleActions к классу appStore позволяет ссылаться на него с помощью this  
+	// привязка handleActions к классу appStore позволяет ссылаться на него с помощью this
 	dispatcher.register(appStore.handleActions.bind(appStore));
 	
-	//Controller Views / Представления — React-компоненты, которые собирают состояние хранилищ и передают его дочерним компонентам через свойства 
+	// Controller Views / Представления — React-компоненты, которые собирают состояние хранилищ и передают его дочерним компонентам
+	// через свойства
 	
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
@@ -125,7 +121,6 @@
 	        _this2.state = {
 	            showText: false
 	        };
-	
 	        return _this2;
 	    }
 	
