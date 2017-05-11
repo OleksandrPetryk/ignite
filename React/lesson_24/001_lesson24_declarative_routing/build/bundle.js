@@ -72,6 +72,10 @@
 	// импорт компонентов, переключаемых при маршрутизации(views)
 	var View1 = __webpack_require__(/*! ./views/view1.jsx */ 235);
 	var View2 = __webpack_require__(/*! ./views/view2.jsx */ 236);
+	var User = __webpack_require__(/*! ./views/view3.jsx */ 248);
+	
+	var userID = {};
+	userID.id = 1;
 	
 	// В данном примере рассмотрена базовая настройка декларативной маршрутизации с помощью react-router 
 	
@@ -126,6 +130,19 @@
 	                                    'View 2'
 	                                )
 	                            )
+	                        ),
+	                        React.createElement(
+	                            'li',
+	                            null,
+	                            React.createElement(
+	                                Link,
+	                                { to: '/user/' + userID.id },
+	                                React.createElement(
+	                                    'button',
+	                                    { className: 'btn btn-lg btn-success' },
+	                                    'User ID'
+	                                )
+	                            )
 	                        )
 	                    )
 	                ),
@@ -175,7 +192,8 @@
 	        { path: '/', component: App },
 	        React.createElement(IndexRoute, { component: Home }),
 	        React.createElement(Route, { path: 'view1', component: View1 }),
-	        React.createElement(Route, { path: 'view2', component: View2 })
+	        React.createElement(Route, { path: 'view2', component: View2 }),
+	        React.createElement(Route, { path: 'user/:userId', component: User })
 	    )
 	), document.getElementById('app'));
 
@@ -27990,6 +28008,62 @@
 	}(React.Component);
 	
 	module.exports = View2;
+
+/***/ },
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */
+/*!**************************************************************!*\
+  !*** ./001_lesson24_declarative_routing/jsx/views/view3.jsx ***!
+  \**************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var React = __webpack_require__(/*! react */ 1);
+	
+	var View3 = function (_React$Component) {
+	    _inherits(View3, _React$Component);
+	
+	    function View3() {
+	        _classCallCheck(this, View3);
+	
+	        return _possibleConstructorReturn(this, (View3.__proto__ || Object.getPrototypeOf(View3)).apply(this, arguments));
+	    }
+	
+	    _createClass(View3, [{
+	        key: 'render',
+	        value: function render() {
+	            return React.createElement(
+	                'h3',
+	                null,
+	                'This is view with user ID: ',
+	                this.props.params.userId
+	            );
+	        }
+	    }]);
+	
+	    return View3;
+	}(React.Component);
+	
+	module.exports = View3;
 
 /***/ }
 /******/ ]);

@@ -107,7 +107,7 @@
 	                            null,
 	                            React.createElement(
 	                                Link,
-	                                { to: '/view1' },
+	                                { to: '/view/view1' },
 	                                React.createElement(
 	                                    'button',
 	                                    { className: 'btn btn-lg btn-success' },
@@ -120,7 +120,7 @@
 	                            null,
 	                            React.createElement(
 	                                Link,
-	                                { to: '/view2' },
+	                                { to: '/view/view2' },
 	                                React.createElement(
 	                                    'button',
 	                                    { className: 'btn btn-lg btn-success' },
@@ -177,8 +177,8 @@
 	        React.createElement(
 	            Route,
 	            { path: '/view', component: View },
-	            React.createElement(Route, { path: '/view1', component: View1 }),
-	            React.createElement(Route, { path: '/view2', component: View2 })
+	            React.createElement(Route, { path: '/view/view1', component: View1 }),
+	            React.createElement(Route, { path: '/view/view2', component: View2 })
 	        )
 	    )
 	), document.getElementById('app'));
@@ -27944,8 +27944,17 @@
 	        value: function render() {
 	            return React.createElement(
 	                "div",
-	                { className: "panel test" },
-	                this.props.children
+	                null,
+	                React.createElement(
+	                    "h1",
+	                    null,
+	                    "Header"
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "panel test" },
+	                    this.props.children
+	                )
 	            );
 	        }
 	    }]);

@@ -12,7 +12,11 @@ var hashHistory = router.hashHistory;
 
 // импорт компонентов, переключаемых при маршрутизации(views)
 var View1 = require('./views/view1.jsx'); 
-var View2 = require('./views/view2.jsx');  
+var View2 = require('./views/view2.jsx');
+var User = require('./views/view3.jsx');
+
+var userID = {}
+userID.id = 1;
 
 // В данном примере рассмотрена базовая настройка декларативной маршрутизации с помощью react-router 
 
@@ -25,6 +29,7 @@ class App extends React.Component {
                      <ul>
                           <li><Link to="/view1"><button className="btn btn-lg btn-success">View 1</button></Link></li>
                           <li><Link to="/view2"><button className="btn btn-lg btn-success">View 2</button></Link></li>
+                          <li><Link to={`/user/${userID.id}`}><button className="btn btn-lg btn-success">User ID</button></Link></li>
                     </ul>
             </div>  
             <div className="panel">{this.props.children}</div>
@@ -48,5 +53,6 @@ ReactDOM.render(
         <IndexRoute component={Home} />
         <Route path="view1" component={View1} />
         <Route path="view2" component={View2} />
+        <Route path="user/:userId" component={User} />
     </Route>
     </Router>, document.getElementById('app')); 

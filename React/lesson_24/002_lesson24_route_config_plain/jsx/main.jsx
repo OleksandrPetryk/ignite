@@ -12,7 +12,8 @@ var hashHistory = router.hashHistory;
 
 // импорт компонентов, переключаемых при маршрутизации(views)
 var View1 = require('./views/view1.jsx'); 
-var View2 = require('./views/view2.jsx');  
+var View2 = require('./views/view2.jsx');
+var Error404 = require('./views/Error404.jsx');
 
 // В данном примере рассмотрен альтернативный вариант конфигурации маршрутизации react-router - в виде JS-объекта 
 
@@ -25,7 +26,7 @@ class App extends React.Component {
                      <ul>
                           <li><Link to="/view1"><button className="btn btn-lg btn-success">View 1</button></Link></li>
                           <li><Link to="/view2"><button className="btn btn-lg btn-success">View 2</button></Link></li>
-                    </ul>
+                     </ul>
             </div>  
             <div className="panel">{this.props.children}</div>
         </div>
@@ -47,7 +48,8 @@ const routes = {
     indexRoute: { component: Home }, 
     childRoutes: [
         { path: 'view1', component: View1 }, 
-        { path: 'view2', component: View2 }
+        { path: 'view2', component: View2 },
+        { path: '*', component: Error404 }
     ]
 } 
 
