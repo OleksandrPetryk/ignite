@@ -26,9 +26,7 @@ function mapStateToProps(state) {
 
 // привязка actions к компоненту App
 function matchDispatchToProps(dispatch) {
-    return bindActionCreators({
-        greet: actions.showText
-    }, dispatch)
+    return bindActionCreators({ greet: actions.showText}, dispatch)
 }
 
 module.exports = connect(mapStateToProps, matchDispatchToProps)(App) 

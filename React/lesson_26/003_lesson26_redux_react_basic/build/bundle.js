@@ -23778,7 +23778,7 @@
 	
 	var bindActionCreators = __webpack_require__(/*! redux */ 1).bindActionCreators;
 	var connect = __webpack_require__(/*! react-redux */ 189).connect;
-	var actions = __webpack_require__(/*! ../actions/actions */ 200);
+	var actions = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../actions/actions\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
@@ -23829,32 +23829,10 @@
 	
 	// привязка actions к компоненту App
 	function matchDispatchToProps(dispatch) {
-	    return bindActionCreators({
-	        greet: actions.showText
-	    }, dispatch);
+	    return bindActionCreators({ greet: actions.showText }, dispatch);
 	}
 	
 	module.exports = connect(mapStateToProps, matchDispatchToProps)(App);
-
-/***/ },
-/* 200 */
-/*!***************************************************************!*\
-  !*** ./003_lesson26_redux_react_basic/src/actions/actions.js ***!
-  \***************************************************************/
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var showText = exports.showText = function showText() {
-	    alert('action!');
-	    return {
-	        type: 'GREET',
-	        payload: 'Hello World'
-	    };
-	};
 
 /***/ }
 /******/ ]);

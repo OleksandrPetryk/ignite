@@ -55,8 +55,8 @@
 	var Provider = __webpack_require__(/*! react-redux */ 189).Provider;
 	var createStore = __webpack_require__(/*! redux */ 1).createStore;
 	
-	var usersReducer = __webpack_require__(/*! ./reducers/usersReducer */ 205);
-	var App = __webpack_require__(/*! ./containers/app.jsx */ 206);
+	var usersReducer = __webpack_require__(/*! ./reducers/usersReducer */ 204);
+	var App = __webpack_require__(/*! ./containers/app.jsx */ 205);
 	
 	var store = createStore(usersReducer);
 	
@@ -23734,8 +23734,7 @@
 /* 201 */,
 /* 202 */,
 /* 203 */,
-/* 204 */,
-/* 205 */
+/* 204 */
 /*!***************************************************************!*\
   !*** ./005_lesson26_sync_stream/src/reducers/usersReducer.js ***!
   \***************************************************************/
@@ -23794,7 +23793,7 @@
 	module.exports = usersReducer;
 
 /***/ },
-/* 206 */
+/* 205 */
 /*!*********************************************************!*\
   !*** ./005_lesson26_sync_stream/src/containers/app.jsx ***!
   \*********************************************************/
@@ -23816,9 +23815,9 @@
 	var bindActionCreators = __webpack_require__(/*! redux */ 1).bindActionCreators;
 	var connect = __webpack_require__(/*! react-redux */ 189).connect;
 	
-	var ItemTable = __webpack_require__(/*! ../components/itemTable.jsx */ 207);
-	var EditBar = __webpack_require__(/*! ./editBar.jsx */ 208);
-	var actions = __webpack_require__(/*! ../actions/actions */ 209);
+	var ItemTable = __webpack_require__(/*! ../components/itemTable.jsx */ 206);
+	var EditBar = __webpack_require__(/*! ./editBar.jsx */ 207);
+	var actions = __webpack_require__(/*! ../actions/actions */ 208);
 	
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
@@ -23885,7 +23884,7 @@
 	module.exports = connect(mapStateToProps, matchDispatchToProps)(App);
 
 /***/ },
-/* 207 */
+/* 206 */
 /*!***************************************************************!*\
   !*** ./005_lesson26_sync_stream/src/components/itemTable.jsx ***!
   \***************************************************************/
@@ -23975,7 +23974,7 @@
 	module.exports = ItemTable;
 
 /***/ },
-/* 208 */
+/* 207 */
 /*!*************************************************************!*\
   !*** ./005_lesson26_sync_stream/src/containers/editBar.jsx ***!
   \*************************************************************/
@@ -23995,7 +23994,7 @@
 	
 	var bindActionCreators = __webpack_require__(/*! redux */ 1).bindActionCreators;
 	var connect = __webpack_require__(/*! react-redux */ 189).connect;
-	var actions = __webpack_require__(/*! ../actions/actions */ 209);
+	var actions = __webpack_require__(/*! ../actions/actions */ 208);
 	
 	var EditBar = function (_React$Component) {
 	    _inherits(EditBar, _React$Component);
@@ -24112,7 +24111,7 @@
 	module.exports = connect(mapStateToProps, matchDispatchToProps)(EditBar);
 
 /***/ },
-/* 209 */
+/* 208 */
 /*!*********************************************************!*\
   !*** ./005_lesson26_sync_stream/src/actions/actions.js ***!
   \*********************************************************/

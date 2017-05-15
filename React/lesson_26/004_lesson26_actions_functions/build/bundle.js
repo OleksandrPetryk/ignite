@@ -55,8 +55,8 @@
 	var Provider = __webpack_require__(/*! react-redux */ 189).Provider;
 	var createStore = __webpack_require__(/*! redux */ 1).createStore;
 	
-	var countReducer = __webpack_require__(/*! ./reducers/countReducer */ 201);
-	var App = __webpack_require__(/*! ./components/app.jsx */ 202);
+	var countReducer = __webpack_require__(/*! ./reducers/countReducer */ 200);
+	var App = __webpack_require__(/*! ./components/app.jsx */ 201);
 	
 	var store = createStore(countReducer);
 	
@@ -23729,8 +23729,7 @@
 /***/ },
 /* 198 */,
 /* 199 */,
-/* 200 */,
-/* 201 */
+/* 200 */
 /*!*********************************************************************!*\
   !*** ./004_lesson26_actions_functions/src/reducers/countReducer.js ***!
   \*********************************************************************/
@@ -23766,7 +23765,7 @@
 	module.exports = countReducer;
 
 /***/ },
-/* 202 */
+/* 201 */
 /*!***************************************************************!*\
   !*** ./004_lesson26_actions_functions/src/components/app.jsx ***!
   \***************************************************************/
@@ -23775,7 +23774,7 @@
 	'use strict';
 	
 	var React = __webpack_require__(/*! react */ 19);
-	var Counter = __webpack_require__(/*! ./counter.jsx */ 203);
+	var Counter = __webpack_require__(/*! ./counter.jsx */ 202);
 	
 	var App = function App() {
 	   return React.createElement(
@@ -23788,7 +23787,7 @@
 	module.exports = App;
 
 /***/ },
-/* 203 */
+/* 202 */
 /*!*******************************************************************!*\
   !*** ./004_lesson26_actions_functions/src/components/counter.jsx ***!
   \*******************************************************************/
@@ -23808,7 +23807,7 @@
 	var bindActionCreators = __webpack_require__(/*! redux */ 1).bindActionCreators;
 	var connect = __webpack_require__(/*! react-redux */ 189).connect;
 	
-	var actions = __webpack_require__(/*! ../actions/index */ 204);
+	var actions = __webpack_require__(/*! ../actions/index */ 203);
 	
 	var Counter = function (_React$Component) {
 	    _inherits(Counter, _React$Component);
@@ -23874,7 +23873,7 @@
 	module.exports = connect(mapStateToProps, matchDispatchToProps)(Counter);
 
 /***/ },
-/* 204 */
+/* 203 */
 /*!*************************************************************!*\
   !*** ./004_lesson26_actions_functions/src/actions/index.js ***!
   \*************************************************************/

@@ -9,7 +9,7 @@ export function loadText() {
     // асинхронная обработка события 
     let promise = fetch('demo.html')
         .then(function(response) { 
-			return response.text(); 
+			nse.text(return respo); 
         }).then(function(text){
 						
 			let data = text

@@ -40,7 +40,7 @@ function logger ({getState}) {
 
     // actions 
     store.dispatch({ type: 'CHANGE_NAME', payload: 'Jane' }) 
-    store.dispatch({ type: 'CHANGE_AGE', payload: 25 }) 
-    store.dispatch({ type: 'NEW_MSG', payload: 'This is a demo message!' }) 
+    store.dispatch({ type: 'CHANGE_AGE',  payload: 25 }) 
+    store.dispatch({ type: 'NEW_MSG',     payload: 'This is a demo message!' }) 
 
 

@@ -60,12 +60,12 @@
 	var applyMiddleware = redux.applyMiddleware;
 	
 	// redux-thunk - middleware-функция, позволяющая создавать actionCreators, которые возвращают функцию вместо action. 
-	var thunk = __webpack_require__(/*! redux-thunk */ 210).default;
+	var thunk = __webpack_require__(/*! redux-thunk */ 209).default;
 	
-	var usersReducer = __webpack_require__(/*! ./reducers/usersReducer */ 211);
-	var App = __webpack_require__(/*! ./containers/app.jsx */ 212);
+	var usersReducer = __webpack_require__(/*! ./reducers/usersReducer */ 210);
+	var App = __webpack_require__(/*! ./containers/app.jsx */ 211);
 	
-	var fetchUsers = __webpack_require__(/*! ./actions/async */ 216).fetchUsers;
+	var fetchUsers = __webpack_require__(/*! ./actions/async */ 215).fetchUsers;
 	
 	var middleware = applyMiddleware(thunk);
 	var store = createStore(usersReducer, middleware);
@@ -23750,8 +23750,7 @@
 /* 206 */,
 /* 207 */,
 /* 208 */,
-/* 209 */,
-/* 210 */
+/* 209 */
 /*!************************************!*\
   !*** ./~/redux-thunk/lib/index.js ***!
   \************************************/
@@ -23782,7 +23781,7 @@
 	exports['default'] = thunk;
 
 /***/ },
-/* 211 */
+/* 210 */
 /*!****************************************************************!*\
   !*** ./006_lesson26_async_stream/src/reducers/usersReducer.js ***!
   \****************************************************************/
@@ -23855,7 +23854,7 @@
 	module.exports = usersReducer;
 
 /***/ },
-/* 212 */
+/* 211 */
 /*!**********************************************************!*\
   !*** ./006_lesson26_async_stream/src/containers/app.jsx ***!
   \**********************************************************/
@@ -23876,11 +23875,11 @@
 	var bindActionCreators = __webpack_require__(/*! redux */ 1).bindActionCreators;
 	var connect = __webpack_require__(/*! react-redux */ 189).connect;
 	
-	var ItemTable = __webpack_require__(/*! ../components/itemTable.jsx */ 213);
-	var EditBar = __webpack_require__(/*! ./editBar.jsx */ 214);
+	var ItemTable = __webpack_require__(/*! ../components/itemTable.jsx */ 212);
+	var EditBar = __webpack_require__(/*! ./editBar.jsx */ 213);
 	
-	var actions = __webpack_require__(/*! ../actions/actions */ 215);
-	var asyncActions = __webpack_require__(/*! ../actions/async */ 216);
+	var actions = __webpack_require__(/*! ../actions/actions */ 214);
+	var asyncActions = __webpack_require__(/*! ../actions/async */ 215);
 	
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
@@ -23942,7 +23941,7 @@
 	module.exports = connect(mapStateToProps, matchDispatchToProps)(App);
 
 /***/ },
-/* 213 */
+/* 212 */
 /*!****************************************************************!*\
   !*** ./006_lesson26_async_stream/src/components/itemTable.jsx ***!
   \****************************************************************/
@@ -24032,7 +24031,7 @@
 	module.exports = ItemTable;
 
 /***/ },
-/* 214 */
+/* 213 */
 /*!**************************************************************!*\
   !*** ./006_lesson26_async_stream/src/containers/editBar.jsx ***!
   \**************************************************************/
@@ -24053,7 +24052,7 @@
 	var bindActionCreators = __webpack_require__(/*! redux */ 1).bindActionCreators;
 	var connect = __webpack_require__(/*! react-redux */ 189).connect;
 	
-	var actions = __webpack_require__(/*! ../actions/actions */ 215);
+	var actions = __webpack_require__(/*! ../actions/actions */ 214);
 	
 	var EditBar = function (_React$Component) {
 	    _inherits(EditBar, _React$Component);
@@ -24170,7 +24169,7 @@
 	module.exports = connect(mapStateToProps, matchDispatchToProps)(EditBar);
 
 /***/ },
-/* 215 */
+/* 214 */
 /*!**********************************************************!*\
   !*** ./006_lesson26_async_stream/src/actions/actions.js ***!
   \**********************************************************/
@@ -24196,7 +24195,7 @@
 	};
 
 /***/ },
-/* 216 */
+/* 215 */
 /*!********************************************************!*\
   !*** ./006_lesson26_async_stream/src/actions/async.js ***!
   \********************************************************/

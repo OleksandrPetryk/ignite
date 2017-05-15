@@ -22612,7 +22612,7 @@
 	var React = __webpack_require__(/*! react */ 1);
 	
 	var appStore = __webpack_require__(/*! ../Stores/appStore */ 191);
-	var appActions = __webpack_require__(/*! ../Actions/appActions */ 193);
+	var appActions = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../Actions/appActions\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
@@ -22769,48 +22769,6 @@
 	var _flux = __webpack_require__(/*! flux */ 172);
 	
 	exports.default = new _flux.Dispatcher();
-
-/***/ },
-/* 193 */
-/*!**************************************************************!*\
-  !*** ./005_lesson25_async_actions/src/Actions/appActions.js ***!
-  \**************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.loadText = loadText;
-	
-	var _dispatcher = __webpack_require__(/*! ../dispatcher */ 192);
-	
-	var _dispatcher2 = _interopRequireDefault(_dispatcher);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function loadText() {
-	    // событие начала загрузки
-	    _dispatcher2.default.dispatch({
-	        type: 'LOAD_START'
-	    });
-	
-	    // асинхронная обработка события 
-	    var promise = fetch('demo.html').then(function (response) {
-	        return response.text();
-	    }).then(function (text) {
-	
-	        var data = text;
-	
-	        //событие окончания загрузки
-	        _dispatcher2.default.dispatch({
-	            type: 'LOAD_END',
-	            data: data
-	
-	        });
-	    });
-	}
 
 /***/ }
 /******/ ]);
