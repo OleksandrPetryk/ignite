@@ -2,7 +2,7 @@
 
 var bindActionCreators = require('redux').bindActionCreators; 
 var connect = require('react-redux').connect; 
-var actions = require('../actions/actions'); 
+//var actions = require('../actions/actions'); 
 
 class App extends React.Component {
     render() {

@@ -23778,7 +23778,7 @@
 	
 	var bindActionCreators = __webpack_require__(/*! redux */ 1).bindActionCreators;
 	var connect = __webpack_require__(/*! react-redux */ 189).connect;
-	var actions = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../actions/actions\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	//var actions = require('../actions/actions'); 
 	
 	var App = function (_React$Component) {
 	    _inherits(App, _React$Component);
