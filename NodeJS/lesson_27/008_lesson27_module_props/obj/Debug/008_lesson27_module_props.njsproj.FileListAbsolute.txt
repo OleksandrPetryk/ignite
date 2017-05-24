@@ -1,0 +1,2 @@
+H:\GitHub\Ignite\NodeJS\lesson_27\008_lesson27_module_props\obj\Debug\008_lesson27_module_props.njsprojResolveAssemblyReference.cache
+H:\GitHub\Ignite\NodeJS\lesson_27\008_lesson27_module_props\bin\Microsoft.NodejsTools.WebRole.dll

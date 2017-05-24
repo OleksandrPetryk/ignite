@@ -1,51 +1,46 @@
-﻿    // Потоки(Streams) - объекты, которые позволяют считывать данные или записывать данные в источник в непрерывном режиме.
-    // В NodeJS есть 4 типа потоков: 
-        // Readable - поток, который используется для операций чтения
-        // Writable - поток, который используется для операци записи 
-        // Duplex - поток, который может быть использован и для операций чтения, и для операций записи 
-        // Transform - тип duplex-потока, в котором выходные данные рассчитываеются на основе входных данных  
+﻿// Потоки(Streams) - объекты, которые позволяют считывать данные или записывать данные в источник в непрерывном режиме. 
+// 
+// В NodeJS есть 2 основных вида потоков: 
+// Readable - поток, который используется для операций чтения
+// Writable - поток, который используется для операци записи 
 
-var fs = require('fs'); 
-var writeData = 'This is the file content!'; 
+// Методы потоков асинхронны
 
-// поток для записи данных 
-// генерирует события error(при ошибке), finish(при завершении текущей операции записи данных)
-var writerStream = fs.createWriteStream('output.txt'); 
 
-writerStream.write(writeData, 'utf-8'); 
+// В данном примере проводится сравнение работы с потоками данных с работой с методами read/write
+// Как методы потоков, так и методы read/write 
 
-writerStream.end(); 
 
-writerStream.on('finish', function() {
-    console.log('Write completed'); 
-}); 
+var fs = require('fs');
 
-writerStream.on('error', function(err) {
-    console.log(err); 
+// поток для записи данных
+var writerStream = fs.createWriteStream('output1.txt');
+
+writerStream.write('Sample Data 1 ', function (err) {
+    if (err) console.log(err);
+    else console.log('write stream finish')
+
+    var readerStream = fs.createReadStream('output1.txt');
+
+    readerStream.on('data', function (data) {
+        console.log('data read: ' + data);
+    });
+
+    readerStream.on('end', function () {
+        console.log('read stream end');
+    });
 });
 
-// поток для чтения данных
-// генерирует события error(при ошибке), data(когда данные доступны для чтения), 
-// end(когда больше нет доступных данных для чтения)
-var readData = ''; 
-var readerStream = fs.createReadStream('output.txt');
 
-readerStream.setEncoding('UTF8');
+fs.open('output2.txt', 'w+', function (err, fd) {
 
-readerStream.on('data', function (chunk) {
-    readData += chunk; 
-});
+    fs.write(fd, 'Sample Data 2', function (err) {
+        if (err) console.log(err);
+        console.log('write end')
+    });
 
-readerStream.on('end', function () {
-    console.log(readData); 
-});
-
-readerStream.on('error', function (err) {
-    console.log(err);
-}); 
-
-
-
-
-
+    fs.read(fd, 100, function () {
+        console.log(data)
+    });
+})
 

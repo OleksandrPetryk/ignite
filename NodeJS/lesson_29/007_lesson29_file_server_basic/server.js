@@ -1,38 +1,27 @@
-// в данном примере показано создание базового сервера для чтения файлов 
+﻿var http = require('http');
+var port = process.env.port || 1337;
+http.createServer(function (req, res) {
 
-const http = require('http'); 
-const fs   = require('fs'); 
-const url  = require('url'); 
+    // формирование разных ответов сервера для запросов с различными HTTP методами 
+    switch (req.method) {
+        case 'GET': {
 
-const port = process.env.port || 1337; 
+            var response_text = 'GET request to path ' + req.url
 
-const server = http.createServer(function (req, res) { 
-	// получение пути к файлу
-	var path = url.parse(req.url).pathname; 
+            console.log(response_text);
+            res.end(response_text);
 
-	console.log(`${path} - file requested!`); 
+            break
+        }
+        case 'POST': {
 
-	// чтение файла по указанному пути 
-	// метод substr удаляет первый символ пути('/')  
-	fs.readFile(path.substr(1),  function(err, data) { 
-		// обработчик ошибок
-		if (err) {
-			console.log(err); 
-			res.writeHead(404, {'Content-Type': 'text/plain'}); 
-			res.write('Not Found!'); 
-		} else {
-			res.writeHead(200, {'Content-Type': 'text/html'}); 
-			// записать в овет содержимое читаемого файла 
-            res.write(data.toString());
-            console.log(data.toString());
-		}
+            var response_text = 'POST request to path ' + req.url
 
-		// отправить тело ответа(response body)  
-		res.end(); 
-	})
+            console.log(response_text);
+            res.end(response_text)
+            break;
+        }
+    }
 
-}).listen(port); 
+}).listen(port);
 
-server.on('listening', function() {
-	console.log('server running on port ' + port); 
-}); 

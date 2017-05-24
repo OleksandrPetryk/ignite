@@ -3,20 +3,27 @@
 var fs = require('fs');
 
 // асинхронное создание файла 
-fs.writeFile('file.txt', 'this is some data!', function(err) { 
-    if(err) {
+// аргументы метода - имя файла для записи, данные для записи в файл и callback-функция. 
+// Callback-функция срабатывает после завершения операции записи данных в файл и принимает в качестве аргумента 
+// объект ошибки. Если при выполнении операции ошибки не произошло, значение аргумента будет null. 
+fs.writeFile('file.txt', 'this is some data', function (err) {
+
+    // обработка ошибки 
+    if (err) {
         console.log(err)
-    } 
+    }
 
     // асинхронное чтение из файла 
-    fs.readFile('file.txt', { encoding: 'utf-8' }, function (err, data) {
+    // Метод для чтения данных из файла вызывается внутри callback функции для записи данных в файл, так как операция записи данных асинхронна 
+    // и при вызове метода для чтения файла вне callback-функции, он сработает раньше, чем данные будут записаны в файл. 
+    fs.readFile('file.txt', function (err, data) {
         if (err) {
             console.log(err)
         }
         else {
             console.log(data.toString())
         }
-    }); 
+    });
 }); 
 
 

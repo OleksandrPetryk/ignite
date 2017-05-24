@@ -15,12 +15,12 @@ const server = http.createServer((req, res) => {
     var rawHeaders = req.rawHeaders;
     // выведет заголовки запроса в виде, в котором они были получены  
     console.log(rawHeaders);
-    console.log('----------------------'); 
+    console.log('----------------------');
 
     // метод response.setHeader устанавливает заголовки ответа 
-    res.setHeader('Content-Type', 'text/html'); 
+    res.setHeader('Content-Type', 'text/html');
     // getHeader возвращает заголовок ответа 
-    console.log(res.getHeader('Content-Type')); 
+    console.log(res.getHeader('Content-Type'));
 
     // если значение true, ответ по умолчанию отправляется с заголовком даты. По умолчанию true
     res.sendDate = false;
@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
     res.write(body); // метод write позволяет создавать тело ответа в режиме потока для записи данных(writable Stream)
 
     res.end(); // метод end сигнализирует о завершении создания ответа 
-    	
+
 });
 
 server.listen(port);

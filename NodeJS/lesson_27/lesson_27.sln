@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "001_lesson27_modules_basic", "001_lesson27_modules_basic\001_lesson27_modules_basic.njsproj", "{F8A15614-A977-48B6-86C1-D0B6F88C83CA}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "008_lesson27_module_props", "008_lesson27_module_props\008_lesson27_module_props.njsproj", "{B92119C8-E1D3-43B8-A707-E2C22F569A51}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "009_lesson27_module_loading_cycle", "009_lesson27_module_loading_cycle\009_lesson27_module_loading_cycle.njsproj", "{B41B57C5-486C-4889-89EA-3CBBE5AED1A4}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsConsoleApp1", "NodejsConsoleApp1\NodejsConsoleApp1.njsproj", "{61E767F3-D9A4-4DBF-81B3-7552329DA451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{B41B57C5-486C-4889-89EA-3CBBE5AED1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B41B57C5-486C-4889-89EA-3CBBE5AED1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B41B57C5-486C-4889-89EA-3CBBE5AED1A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E767F3-D9A4-4DBF-81B3-7552329DA451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E767F3-D9A4-4DBF-81B3-7552329DA451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E767F3-D9A4-4DBF-81B3-7552329DA451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E767F3-D9A4-4DBF-81B3-7552329DA451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

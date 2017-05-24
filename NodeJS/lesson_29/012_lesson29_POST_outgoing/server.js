@@ -1,36 +1,34 @@
-const http = require('http'); 
-const fs = require('fs'); 
-const url = require('url'); 
-const port = process.env.port || 1337; 
+const http = require('http');
+const fs = require('fs');
+const url = require('url');
+const port = process.env.port || 1337;
 
-const server = http.createServer(function(req, res) {
+const server = http.createServer(function (req, res) {
 
-	 var body = ''; 
+    var body = '';
 
- 	 // обработка ошибок запросв
- 	 req.on('error', function(err) {
- 	 	console.log(err); 
- 	 }); 
- 	 // получение данных POST запроса 
- 	 req.on('data', function(data) {
+    // обработка ошибок запросв
+    req.on('error', function (err) {
+        console.log(err);
+    });
+    // получение данных POST запроса 
+    req.on('data', function (data) {
 
- 	 	body = data.toString(); 
+        body = data.toString();
 
- 	 	// создание тела ответа 
- 	 	res.writeHead(200, {'Content-Type': 'text/html'}); 
-		res.write(body); 
-		res.end(); 
+        // создание тела ответа 
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write(body);
+        res.end();
 
-		console.log(`data from request: ${body}`); 
- 	 });  
+        console.log(`data from request: ${body}`);
+    });
 
-
-
-}).listen(port, function () { 
+}).listen(port, function () {
 
     // Создание POST запроса 
     // данные для передачи с POST запросом
-    var postData = 'This is sample POST data!'; 
+    var postData = 'This is sample POST data!';
 
     // Параметры создаваемого запроса 
     var options = {
@@ -38,8 +36,7 @@ const server = http.createServer(function(req, res) {
         port: port,
         method: 'POST',
         headers: { 'Content-Type': 'text/plain' }
-
-    }; 
+    };
 
 
     // сделать запрос на сервер 
@@ -61,9 +58,7 @@ const server = http.createServer(function(req, res) {
     });
 
     req.write(postData); // запись данных в тело запроса 
-    req.end(); 
+    req.end();
 
-    console.log('server running on port ' + port); 
+    console.log('server running on port ' + port);
 }); 
-
-

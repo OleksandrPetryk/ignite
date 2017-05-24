@@ -6,7 +6,7 @@
 // Оставшиеся элементы - аргументы командной строки
 console.log(`all cmd variables:  ${process.argv}`); 
 
-console.log(`user variable: ${process.argv[2]}`); 
+console.log(`user variable: ${process.argv[2]}`);
 
 //process.env.var_name - доступ к переменным окружения nodeJS 
 console.log(`environment variable: ${process.env.test}`); 
