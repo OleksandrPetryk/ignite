@@ -33,9 +33,8 @@
 
 
             btns[1].onclick = function () {
-                // подключиться к пространству имен 
-                var namespace = io('/namespace');
-
+                    
+                
                 namespace.on('connect', function (socket) {
 
                     console.log('connected to namespace');

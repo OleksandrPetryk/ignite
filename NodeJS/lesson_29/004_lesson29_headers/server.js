@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
     console.log(res.getHeader('Content-Type'));
 
     // если значение true, ответ по умолчанию отправляется с заголовком даты. По умолчанию true
-    res.sendDate = false;
+    res.sendDate = true;
 
     console.log(res.headersSent) // boolean - true если заголовки уже отправлены 
 

@@ -5,7 +5,6 @@ var mysql = require('mysql');
 
 var port = process.env.port || 1337; 
 
-
 // соединения могут быть объединены для облегчения их многократного использования 
 // или использования больщого количесва соединений  
 var pool = mysql.createPool({
@@ -17,7 +16,6 @@ var pool = mysql.createPool({
 	password: 'dinamicka123', 
 	database: 'demo'
 });  
-
 
 app.get('/', function(req, res) { 
 	// создать соединение

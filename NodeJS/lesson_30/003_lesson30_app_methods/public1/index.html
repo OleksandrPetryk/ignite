@@ -6,11 +6,9 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 <title>Make Requests!</title> 
-<style>
-div {
-	margin-top: 25px; 
-}
-</style>
+
+    <link href="style.css" rel="stylesheet" />
+    
 <script>
 	
 window.onload = function() {
@@ -45,17 +43,15 @@ window.onload = function() {
 		var str = encodeURIComponent('This is a sample POST request! <br />'); 
 		postReq.send(`text=${str}`); 
 	}); 
-
 }
-
 </script>
 </head> 
 	
 <body> 
 <h2>Press button to make request to server!</h2>
 
-	<div><button class="btn-success btn btn-lg">GET1</button></div>
-	<div><button class="btn-success btn btn-lg">POST1</button></div> 
+	<div><button class="btn-success btn btn-lg">GET1 from index.html</button></div>
+	<div><button class="btn-success btn btn-lg">POST1 from index.html </button></div> 
 
 	<div id="output"></div>
 

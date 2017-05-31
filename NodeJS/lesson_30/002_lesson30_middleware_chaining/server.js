@@ -5,7 +5,7 @@ var port = process.env.port || 1337;
 app.use(function(req, res, next) { 
 
 	if (req.url == '/') {
-		res.end('Hello!'); 
+		res.send('Hello!'); 
 	} else {
 		next(); // передать управление следующей функции middleware 
 	}
@@ -16,7 +16,8 @@ app.use(function(req, res, next){
 
 	if (req.url ==  '/test') {
 		res.end('Hello from test page!');  
-	} else {
+    } else {
+
 		next(); // передать управление следующей функции middleware 
 	}
 }); 

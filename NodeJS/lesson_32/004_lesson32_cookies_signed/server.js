@@ -23,7 +23,8 @@ app.get('/', function (req, res) {
     // доступ к подписанным cookie через свойство req.signedCookies
     res.end(req.signedCookies.cookie2);
 
-    console.log('Cookies: ', req.signedCookies)
+    console.log('signedCookies: ', req.signedCookies);
+    console.log('Cookies: ', req.cookies);
 })
 
 app.listen(port, function () {

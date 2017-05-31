@@ -10,7 +10,7 @@ var app = express();
 app.use(express.static('public1'));
 app.use("/p2" ,express.static('public2')); 
 // middleware для обработки тела запроса в кодировке urlencoded 
-app.use(bodyParser.urlencoded({ extended: true })); 
+//app.use(bodyParser.urlencoded({ extended: true })); 
 
 // метод app.all позоляет обработать запросы с использованием любого http метода
 app.all('/', function(req, res, next) {

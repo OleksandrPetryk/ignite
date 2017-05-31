@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
 	res.cookie('anotherCookie', 'this is another cookie!'); 
 
 	// удалить cookie 
-	res.clearCookie('anotherCookie'); 
+	//res.clearCookie('anotherCookie'); 
 
 	// метод sendFile позволяет указывать в ответе файл для чтения браузером 
 	res.sendFile(path.join(__dirname,'/public/index.html')); 

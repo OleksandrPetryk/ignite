@@ -8,8 +8,9 @@ server.on('error', (err, res) => {
     res.end('bad request');
 });
 
-server.on('request', function () {
-    console.log('request')
+server.on('request', function (req, res) {
+    console.log('request');
+    res.end('request');
 })
 
 server.on('connection', function () {

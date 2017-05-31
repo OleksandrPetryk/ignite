@@ -8,16 +8,15 @@ var session = require('express-session');
 app.use(session({
     // ключ для подписи cookie текущей сессии 
     secret: 'secret',
-    // опция, которая позволяет сохранять сессионный cookie до изменений в сессии(если значение - true)
+    // Заставляет сеанс, который неинициализирован, быть сохраненным в хранилище. Сеанс не инициализируется, если он является новым, но не изменен.
     saveUninitialized: true,
-    // если true, объект сессии перезаписывается в хранилище, даже если в сессии не произошло изменений 
-    resave: false
+     
 }));
 
 app.get('/', function (req, res) {
 
     // доступ к объекту сессии хранится в свостве req.session 
-    console.log(req.session);
+    console.log(req.session.id);
 
     // объекту req.session можно задавать свойства, которые будут доступны в текущей сессии 
     req.session.numberOfRequests = req.session.numberOfRequests + 1;

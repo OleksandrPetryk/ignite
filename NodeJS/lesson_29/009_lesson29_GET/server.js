@@ -5,7 +5,6 @@ const path = require('path');
 
 const port = process.env.port || 1337;
 
-
 const server = http.createServer(function (req, res) {
 
     // обработка ошибок запросов
@@ -19,6 +18,8 @@ const server = http.createServer(function (req, res) {
         // чтение файла index.html
         var file_path = path.join(__dirname, 'index.html');
         fs.readFile(file_path, function (err, data) {
+
+            console.log(data);
 
             // обработка ошибок
             if (err) {

@@ -15,7 +15,6 @@ var connection = mysql.createConnection({
 });  
 
 app.get('/', function(req, res) {
-
         
 		// использование метода beginTransaction предоставляет возможность безопасной работы с бд, 
 		// а именно - возможность отката изменений в бд в случае ошибки 

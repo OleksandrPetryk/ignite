@@ -4,7 +4,7 @@ var app = express();
 
 var port = process.env.port || 1337; 
 
-app.get('/', function(req, res) { 
+app.get('/iPad', function(req, res) { 
 
     // res.locals = свойство, хранящее локальные переменные данного цикла request/response
 	res.locals.prop1 = 'this is a response property!'; 
@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
 	console.log(res.headersSent); //res.headersSent - boolean, true, если заголовки ответа были отправлены 
 
 	// метод res.append позволяет установить заголовки ответа 
-	res.append('Set-Cookie', 'foo=bar; Path=/; HttpOnly');
+	res.append('Set-Cookie', 'iPad=true; Path=/; HttpOnly');
 	res.append('Warning', '199 Miscellaneous warning'); 
 	// метод res.set делает то же самое 
 	res.set('Cache-Control', 'no-cache'); 

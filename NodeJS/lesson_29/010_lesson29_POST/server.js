@@ -38,7 +38,7 @@ const server = http.createServer(function (req, res) {
         })
 
     }
-    else if (req.url == "/request") {
+    else if (req.url == "/request" ) {
 
         var body = '';
 

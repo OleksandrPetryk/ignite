@@ -29,8 +29,8 @@ app.use(function(req, res) {
 
 				// объект, который будет вставлен в базу данных
 			var newItem = {
-				name: 'Another item!', 
-				description: 'some data to be stored'
+				name: 'Another item! #2', 
+                description: 'some data to be stored #2'
 			}; 
 
 			// кодирование данных с помощью функции pool.escape(); 

@@ -44,10 +44,7 @@ namespace.on('connection', function (socket) {
         })
     })
 
-
-
 })
-
 
 server.listen(port, function () {
     console.log('app running on port ' + port);

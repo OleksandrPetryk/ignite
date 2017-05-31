@@ -34,7 +34,8 @@ app.use(function(req, res) {
 			var data = rows[0].NAME; 
 			res.status(200).send(data); 
 
-			console.log('query to database successful'); 
+            console.log('query to database successful'); 
+            console.log(rows);
 		}); 
 
 		res.on('finish', function() {
