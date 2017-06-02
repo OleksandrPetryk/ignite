@@ -19,10 +19,10 @@ app.get('/', function (req, res) {
         httpOnly: true
     })
 
+    console.log('Cookies: ', req.cookies)
+
     // доступ к cookie через свойство req.cookies 
     res.end(req.cookies.cookie1);
-
-    console.log('Cookies: ', req.cookies)
 })
 
     app.listen(port, function () {

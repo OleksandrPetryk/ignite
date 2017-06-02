@@ -3,16 +3,16 @@ var app = express();
 var path = require('path'); 
 
 var port = process.env.port || 1337; 
-
+ 
 var bodyParser = require('body-parser'); 
 
-// подключение модуля для обработки запросов 
+// request handler
 var apiHandler = require('./api_handler');
 
-// middleware для обработки данных запросов в формате JSON 
+// a middleware function, for processing query data in JSON format
 app.use(bodyParser.json()); 
 
-// middleware для использования CORS 
+// middleware function for CORS 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); 
 	res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS"); 
@@ -23,19 +23,19 @@ app.use(function (req, res, next) {
 
 var router = express.Router(); 
 
-// загрузка всех элементов из бд 
+// upload all elements from DB 
 router.get('/', apiHandler.loadItems) 
 
-// выбор элемента
+// select element
 router.get('/:id', apiHandler.getItemById);
 
-// создание элемента 
+// create elemet  
 router.post('/new', apiHandler.createItem);
 
-// обновление элемента (редактирование) 
+// update element
 router.put('/:id', apiHandler.updateItem);
 
-// удаление элемента 
+// delete element 
 router.delete('/:id', apiHandler.removeItem); 
 
 app.use('/todos', router); 

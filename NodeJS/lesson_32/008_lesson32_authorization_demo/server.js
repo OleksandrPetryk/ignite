@@ -35,8 +35,6 @@ app.use(session({
 app.get('/', function(req, res) {
 
         res.sendFile(path.join(__dirname, 'index.html')); 
-    
-
 })
 app.post('/login', function(req, res) {
    

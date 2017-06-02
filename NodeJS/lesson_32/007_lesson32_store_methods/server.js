@@ -8,7 +8,6 @@ var session = require('express-session');
 // подключение модуля express-mysql-session 
 var MySQLStore = require('express-mysql-session')(session);
 
-
 var options = {
     // параметры соединения с бд 
     host: 'localhost',
@@ -60,7 +59,6 @@ app.get('/', function (req, res) {
             sessionStore.clear(function (err) {
 
                 if (err) console.log(err);
-
                 console.log('store is cleared');
 
             });

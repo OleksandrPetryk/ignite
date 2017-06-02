@@ -8,17 +8,15 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json()); 
 
-var port = process.env.port || 3000; 
+var port = process.env.port || 3000;  
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html')); 
 }); 
 
+// REST api 
 
-
-// HTTP запросы к REST api 
-
-// callback-функция для обработки результатов запросов 
+// a callback funaction
 var cb = function (response, res) {
     response.on('data', function (chunk) {
        
@@ -30,10 +28,10 @@ var cb = function (response, res) {
     })
 }
 
-// просмотреть все элементы
+// The GET request
 app.get('/all', function (req, res) {
 
-    // GET-запрос
+    // GET-option
     var options = {
         host: 'localhost', 
         port: 1337, 
@@ -48,10 +46,10 @@ app.get('/all', function (req, res) {
     request.end(); 
 }) 
 
-// просмотреть элемент по id 
+// Display item by id 
 app.get('/view/:id', function (req, res) {
 
-     // GET-запрос
+     // GET-option
      var options = {
         host: 'localhost',
         port: 1337, 
@@ -65,10 +63,10 @@ app.get('/view/:id', function (req, res) {
      request.end(); 
 }) 
 
-// создать новый элемент 
+// A new POST request
 app.post('/new', function (req, res) {
 
-    // POST-запрос
+    // POST-option
      var options = {
         host: 'localhost',
         port: 1337, 
@@ -86,10 +84,10 @@ app.post('/new', function (req, res) {
      request.end();     
 }) 
 
-// редактировать элемент по id 
+
 app.post('/edit/:id', function (req, res) {
 
-     // PUT-запрос
+     // PUT-option
      var options = {
         host: 'localhost',
         port: 1337, 
@@ -108,10 +106,10 @@ app.post('/edit/:id', function (req, res) {
      request.end();     
 })
 
-// удалить элемент по id 
+// Display item by id 
 app.get('/delete/:id', function (req, res) {
 
-    // DELETE-запрос
+    // DELETE-option
      var options = {
         host: 'localhost',
         port: 1337, 

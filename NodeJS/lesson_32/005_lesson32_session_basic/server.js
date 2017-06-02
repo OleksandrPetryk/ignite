@@ -10,7 +10,6 @@ app.use(session({
     secret: 'secret',
     // Заставляет сеанс, который неинициализирован, быть сохраненным в хранилище. Сеанс не инициализируется, если он является новым, но не изменен.
     saveUninitialized: true,
-     
 }));
 
 app.get('/', function (req, res) {
@@ -19,7 +18,7 @@ app.get('/', function (req, res) {
     console.log(req.session.id);
 
     // объекту req.session можно задавать свойства, которые будут доступны в текущей сессии 
-    req.session.numberOfRequests = req.session.numberOfRequests + 1;
+    //req.session.numberOfRequests = req.session.numberOfRequests + 1;
 
     var requestCount = () => {
         return isNaN(req.session.numberOfRequests) ? 0 : req.session.numberOfRequests; 

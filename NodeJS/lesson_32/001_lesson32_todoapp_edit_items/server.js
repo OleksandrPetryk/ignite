@@ -4,7 +4,7 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');  
 
-var port = process.env.port || 1337; 
+var port = process.env.port || 1337;
 
 // подключение модулей для обработки запросов 
 var displayHandler = require('./js/displayhandler'); 

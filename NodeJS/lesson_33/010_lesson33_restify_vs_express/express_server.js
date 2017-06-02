@@ -17,7 +17,7 @@ app.post('/api/new', apiHandler.createItem);
 app.delete('/api/:id', apiHandler.removeItem); 
 
 app.get('/', function (req, res) {
-    res.send('test get request'); 
+    res.send('test get request from Express'); 
     console.timeEnd(req.method + ' ' + req.url); 
 }); 
 

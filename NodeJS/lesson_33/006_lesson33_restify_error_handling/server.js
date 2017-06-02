@@ -9,7 +9,6 @@ var server = restify.createServer({
 });
 
 server.use(function (req, res, next) {
-
     console.log('method: ' + req.method + '\n\r' + 'url: ' + req.url);
     next();
 });
@@ -28,7 +27,6 @@ server.get('/error', function (req, res, next) {
         // ForbiddenError (403 Forbidden)
     var err = new restify.errors.InternalError('Error Demo!');
     next(err); 
-
 });
 
 // событие InternalServer генерируется, когда функция next() в составе любой middleware 

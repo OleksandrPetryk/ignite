@@ -24,7 +24,7 @@ server.get('/', function (req, res) {
 server.get('/api/', apiHandler.getItems);
 
 // создать новый элемент 
-server.post('/api', apiHandler.addItem);
+server.post('/api/', apiHandler.addItem);
 
 // обновить элемент по ID 
 server.put('/api/:id', apiHandler.updateItem);

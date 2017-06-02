@@ -17,13 +17,11 @@ server.use(function (req, res, next) {
 // обработка get запроса 
 server.get('/', function (req, res, next) {
     res.send('This is a server created with restify! GET');
-
 });
 
 // обработка post запроса 
 server.post('/', function (req, res, next) {
     res.send('This is a server created with restify! POST');
-
 });
 
 server.use(function () {

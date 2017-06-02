@@ -19,7 +19,7 @@ server.post('/api/new', apiHandler.createItem);
 server.del('/api/:id', apiHandler.removeItem);  
 
 server.get('/', function (req, res) {
-    res.send('test get request'); 
+    res.send('test get request from restify'); 
     console.timeEnd(req.method + ' ' + req.url); 
 }); 
 
